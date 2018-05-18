@@ -24,15 +24,15 @@
     "gatsby-transformer-remark": "^1.7.40",
     "gatsby-transformer-sharp": "^1.6.22",
     "lodash": "^4.17.5",
-    "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
+    "typeface-lato": "^0.0.54",
+    "typography": "^0.16.17",
+    "typography-theme-fairy-gates": "^0.15.11",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.7.0",
-    "gh-pages": "^1.1.0",
-    "prettier": "^1.12.0"
+    "gh-pages": "^1.1.0"
   },
   "homepage": "https://smart-driving.htwk-leipzig.de",
   "keywords": [

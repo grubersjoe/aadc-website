@@ -1,11 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Link from 'gatsby-link';
 
-// Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-
-import profilePic from './profile-pic.jpg'
-import { rhythm } from '../utils/typography'
+import profilePic from './logo.svg';
+import { rhythm } from '../utils/typography';
 
 class Bio extends React.Component {
   render() {
@@ -13,22 +10,32 @@ class Bio extends React.Component {
       <div
         style={{
           display: 'flex',
-          marginBottom: rhythm(2.5),
+          marginBottom: rhythm(1.5),
         }}
       >
-        <img
-          src={profilePic}
-          alt={`Kyle Mathews`}
+        <Link
+          to={'/'}
+          title={'Start'}
           style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            width: rhythm(2),
-            height: rhythm(2),
+            display: 'block',
+            marginRight: rhythm(1),
           }}
-        />
-        <p>
-          Written by <strong>Kyle Mathews</strong> who lives and works in San Francisco building useful things.{' '}
-          <a href="https://twitter.com/kylemathews"> You should follow him on Twitter </a>
+        >
+          <img
+            src={profilePic}
+            alt={'HTWK Smart Driving'}
+            style={{
+              width: rhythm(30),
+              height: 'auto',
+              marginBottom: 0,
+            }}
+          />
+        </Link>
+
+        <p style={{ marginBottom: 0 }}>
+          Hey! Willkommen auf der Website des Teams <strong>HTWK Smart Driving</strong> der Hochschule für Technik,
+          Wirtschaft und Kultur Leipzig. Wir sind eine studentische Forschungs&shy;gruppe, die sich mit Technologien
+          rund ums autonome Autofahren beschäftigt. Jedes Jahr nehmen wir am Audi Autonomous Driving Cup teil.
         </p>
       </div>
     )

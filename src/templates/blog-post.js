@@ -18,10 +18,10 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            ...scale(-1 / 5),
+            ...scale(-.2),
             display: 'block',
             marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginTop: rhythm(-.5),
           }}
         >
           {post.frontmatter.date}
@@ -45,8 +45,7 @@ class BlogPostTemplate extends React.Component {
         >
           {previous && (
             <li>
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+              <Link to={previous.fields.slug} rel="prev"> ← {previous.frontmatter.title}
               </Link>
             </li>
           )}
@@ -54,8 +53,7 @@ class BlogPostTemplate extends React.Component {
           {next && (
             <li>
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+                {next.frontmatter.title} → </Link>
             </li>
           )}
         </ul>
