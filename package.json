@@ -25,6 +25,7 @@
     "gatsby-transformer-sharp": "^1.6.22",
     "lodash": "^4.17.5",
     "prettier": "^1.12.1",
+    "prop-types": "^15.6.1",
     "react": "latest",
     "typeface-lato": "^0.0.54",
     "typography": "^0.16.17",
@@ -33,11 +34,18 @@
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.7.0",
-    "gh-pages": "^1.1.0"
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.1"
   },
   "homepage": "https://smart-driving.htwk-leipzig.de",
   "keywords": [
+    "smart-driving",
+    "htwk",
+    "aadc",
     "gatsby"
   ],
   "license": "MIT",
@@ -47,13 +55,12 @@
     "url": "git+https://smart-driving.htwk-leipzig.de/git/aadc/website-gatsby.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write 'src/**/*.js' 'src/**/*.md'",
-    "develop": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "dev": "gatsby develop",
+    "develop": "gatsby develop",
+    "format": "prettier-eslint --write '*.js' 'src/**/*.js' 'src/**/*.md'",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "precommit": "npm run format && npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

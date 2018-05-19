@@ -1,32 +1,34 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { rhythm, scale } from '../utils/typography'
+import { rhythm } from '../utils/typography';
 
-class Template extends React.Component {
-  render() {
-    const { children } = this.props;
+const Template = (props) => {
+  const { children } = props;
 
-    // let rootPath = `/`;
-    // if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-    //   rootPath = __PATH_PREFIX__ + `/`
-    // }
+  // let rootPath = `/`;
+  // if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
+  //   rootPath = __PATH_PREFIX__ + `/`
+  // }
 
-    // if (location.pathname !== rootPath)
+  // if (location.pathname !== rootPath)
 
-    return (
-      <div
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(24),
-          padding: `${rhythm(2)} 0`,
-        }}
-      >
-        {children()}
-      </div>
-    )
-  }
-}
+  return (
+    <div
+      style={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        maxWidth: rhythm(24),
+        padding: `${rhythm(2)} 0`,
+      }}
+    >
+      {children()}
+    </div>
+  );
+};
 
-export default Template
+Template.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Template;

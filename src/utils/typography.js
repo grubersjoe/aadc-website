@@ -10,18 +10,20 @@ const theme = {
   bodyWeight: 400,
   headerWeight: 600,
   boldWeight: 600,
-  googleFonts: [{
-    name: 'IBM Plex Sans',
-    styles: ['400', '400i', '500', '600']
-  }],
-  scaleRatio: 1.618
+  googleFonts: [
+    {
+      name: 'IBM Plex Sans',
+      styles: ['400', '400i', '500', '600'],
+    },
+  ],
+  scaleRatio: 1.618,
 };
 
 theme.overrideThemeStyles = () => ({
   'h1, h2, h3, a': {
     color: colorPrimary,
   },
-  'a': {
+  a: {
     textDecoration: 'none',
   },
   'p a': {
