@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: 'HTWK Smart Driving',
+    author: 'Jonathan Gruber',
+    description: 'Website des studentischen Teams HTWK Smart Driving',
+    siteUrl: 'https://smart-driving.htwk-leipzig.de',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -54,4 +54,4 @@ module.exports = {
       },
     },
   ],
-}
+};

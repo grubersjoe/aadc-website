@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import profilePic from './logo.svg';
+import logo from './logo.svg';
 import { rhythm } from '../utils/typography';
 
 class Bio extends React.Component {
@@ -22,7 +22,7 @@ class Bio extends React.Component {
           }}
         >
           <img
-            src={profilePic}
+            src={logo}
             alt={'HTWK Smart Driving'}
             style={{
               width: rhythm(30),
@@ -35,7 +35,7 @@ class Bio extends React.Component {
         <p style={{ marginBottom: 0 }}>
           Hey! Willkommen auf der Website des Teams <strong>HTWK Smart Driving</strong> der Hochschule für Technik,
           Wirtschaft und Kultur Leipzig. Wir sind eine studentische Forschungs&shy;gruppe, die sich mit Technologien
-          rund ums autonome Autofahren beschäftigt. Jedes Jahr nehmen wir am Audi Autonomous Driving Cup teil.
+          rund um das autonome Autofahren beschäftigt. Jedes Jahr nehmen wir am <a href="https://www.audi-autonomous-driving-cup.com" target='blank'>Audi Autonomous Driving Cup teil</a>.
         </p>
       </div>
     )

@@ -4,15 +4,15 @@ const colorPrimary = '#00336f';
 const theme = {
   title: 'SmartDriving',
   baseFontSize: '18px',
-  baseLineHeight: 1.61,
-  headerFontFamily: ['Lato', 'sans-serif'],
-  bodyFontFamily: ['Lato', 'sans-serif'],
+  baseLineHeight: 1.55,
+  headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
+  bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
   bodyWeight: 400,
-  headerWeight: 700,
-  boldWeight: 700,
+  headerWeight: 600,
+  boldWeight: 600,
   googleFonts: [{
-    name: 'Lato',
-    styles: ['400', '400i', '700', '700i']
+    name: 'IBM Plex Sans',
+    styles: ['400', '400i', '500', '600']
   }],
   scaleRatio: 1.618
 };
@@ -20,7 +20,13 @@ const theme = {
 theme.overrideThemeStyles = () => ({
   'h1, h2, h3, a': {
     color: colorPrimary,
-  }
+  },
+  'a': {
+    textDecoration: 'none',
+  },
+  'p a': {
+    fontWeight: 500,
+  },
 });
 
 const typography = new Typography(theme);
