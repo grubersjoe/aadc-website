@@ -6,10 +6,10 @@ import get from 'lodash/get';
 import Bio from '../components/Bio';
 import { rhythm, scale } from '../utils/typography';
 
-const BlogPostTemplate = () => {
-  const post = this.props.data.markdownRemark;
-  const siteTitle = get(this.props, 'data.site.siteMetadata.title');
-  const { previous, next } = this.props.pathContext;
+const BlogPostTemplate = (props) => {
+  const post = props.data.markdownRemark;
+  const siteTitle = get(props, 'data.site.siteMetadata.title');
+  const { previous, next } = props.pathContext;
 
   return (
     <div>
