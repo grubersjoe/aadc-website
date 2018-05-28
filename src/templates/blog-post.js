@@ -3,7 +3,6 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import get from 'lodash/get';
 
-import Bio from '../components/Bio';
 import { rhythm, scale } from '../utils/typography';
 
 const BlogPostTemplate = (props) => {
@@ -15,24 +14,17 @@ const BlogPostTemplate = (props) => {
     <div>
       <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
       <h1>{post.frontmatter.title}</h1>
-      <p
+      <small
         style={{
-          ...scale(-0.2),
           display: 'block',
-          marginBottom: rhythm(1),
+          marginBottom: rhythm(.75),
           marginTop: rhythm(-0.5),
+          fontWeight: 700,
         }}
       >
         {post.frontmatter.date}
-      </p>
+      </small>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
-      <Bio />
-
       <ul
         style={{
           display: 'flex',
@@ -44,7 +36,7 @@ const BlogPostTemplate = (props) => {
       >
         {previous && (
           <li>
-            <Link to={previous.fields.slug} rel="prev">
+            <Link to={'/' + previous.fields.slug} rel="prev">
               {' '}
               ← {previous.frontmatter.title}
             </Link>
@@ -53,7 +45,7 @@ const BlogPostTemplate = (props) => {
 
         {next && (
           <li>
-            <Link to={next.fields.slug} rel="next">
+            <Link to={'/' + next.fields.slug} rel="next">
               {next.frontmatter.title} →{' '}
             </Link>
           </li>
@@ -73,12 +65,12 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug }}) {
       id
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD. MMMM YYYY", locale: "de_DE")
       }
     }
   }

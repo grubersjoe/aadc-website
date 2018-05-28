@@ -3,17 +3,25 @@ import Typography from 'typography';
 const colorPrimary = '#00336f';
 const theme = {
   title: 'SmartDriving',
-  baseFontSize: '18px',
-  baseLineHeight: 1.55,
+  baseFontSize: '20px',
+  baseLineHeight: 1.5,
   headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
   bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
   bodyWeight: 400,
-  headerWeight: 600,
-  boldWeight: 600,
+  headerWeight: 700,
+  boldWeight: 700,
   googleFonts: [
     {
+      name: 'Nunito',
+      styles: ['400', '400i', '600', '700', '800'],
+    },
+    {
+      name: 'Source Sans Pro',
+      styles: ['400', '400i', '600', '600i', '700', '700i'],
+    },
+    {
       name: 'IBM Plex Sans',
-      styles: ['400', '400i', '500', '600'],
+      styles: ['400', '400i', '600', '600i', '700', '700i'],
     },
   ],
   scaleRatio: 1.618,
@@ -23,7 +31,7 @@ theme.overrideThemeStyles = () => ({
   'h1, h2, h3, a': {
     color: colorPrimary,
   },
-  'a': {
+  a: {
     textDecoration: 'none',
   },
   'p a': {
@@ -31,6 +39,9 @@ theme.overrideThemeStyles = () => ({
   },
   'p a:hover': {
     borderBottom: `1px solid ${colorPrimary}`,
+  },
+  small: {
+    fontSize: '85%',
   },
 });
 

@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
 
-import Bio from '../components/Bio';
 import { rhythm } from '../utils/typography';
 
 const BlogIndex = (props) => {
@@ -13,21 +12,31 @@ const BlogIndex = (props) => {
   return (
     <div>
       <Helmet title={siteTitle} />
-      <Bio />
       {posts.map(({ node }) => {
         const title = get(node, 'frontmatter.title') || node.fields.slug;
         return (
-          <div key={node.fields.slug}>
-            <h3
-              style={{
-                marginBottom: rhythm(1 / 6),
-              }}
-            >
-              <Link to={node.fields.slug}>{title}</Link>
-            </h3>
-            <small>{node.frontmatter.date}</small>
+          <article key={node.fields.slug} style={{ marginBottom: rhythm(1.25) }}>
+            <header>
+              <h3
+                style={{
+                  marginBottom: rhythm(1/6),
+                }}
+              >
+                <Link to={node.fields.slug}>{title}</Link>
+              </h3>
+              <small
+                style={{
+                  display: 'block',
+                  fontWeight: 600,
+                  marginTop: rhythm(0.25),
+                  marginBottom: rhythm(0.25),
+                }}
+              >
+                {node.frontmatter.date}
+              </small>
+            </header>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-          </div>
+          </article>
         );
       })}
     </div>
@@ -43,7 +52,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: DESC} 
+      filter: {fileAbsolutePath: {regex: "/(posts)/.*\\.md$/"}}
+    ) {
       edges {
         node {
           excerpt
@@ -58,4 +70,5 @@ export const pageQuery = graphql`
       }
     }
   }
+
 `;

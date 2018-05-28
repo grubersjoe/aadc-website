@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Bio from '../components/Bio';
 
 import { rhythm } from '../utils/typography';
 
@@ -22,6 +23,7 @@ const Template = (props) => {
         padding: `${rhythm(2)} 0`,
       }}
     >
+      <Bio large />
       {children()}
     </div>
   );
