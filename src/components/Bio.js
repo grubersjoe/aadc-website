@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 
 import logo from './logo.svg';
@@ -39,11 +38,11 @@ const Bio = () => (
       }}
     >
       Wir sind das Team <strong>HTWK Smart Driving</strong> der{' '}
-      <a href="https://www.htwk-leipzig.de" target="_blank">
+      <a href="https://www.htwk-leipzig.de" target="_blank" rel="noopener noreferrer">
         Hoch&shy;schule für Technik, Wirtschaft und Kultur Leipzig
       </a>. Als studen&shy;tische Forschungs&shy;gruppe beschäftigen wir uns mit Technologien rund
       um das autonome Autofahren. Seit 2015 nehmen wir am{' '}
-      <a href="https://www.audi-autonomous-driving-cup.com" target="blank">
+      <a href="https://www.audi-autonomous-driving-cup.com" target="_blank" rel="noopener noreferrer">
         Audi Autonomous Driving Cup
       </a>{' '}
       teil.

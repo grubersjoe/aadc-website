@@ -5,14 +5,8 @@ import Bio from '../components/Bio';
 import { rhythm } from '../utils/typography';
 
 const Template = (props) => {
-  const { children } = props;
-
-  // let rootPath = `/`;
-  // if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-  //   rootPath = __PATH_PREFIX__ + `/`
-  // }
-
-  // if (location.pathname !== rootPath)
+  const { children, location } = props;
+  const onFrontpage = location.pathname === '/';
 
   return (
     <div
@@ -23,14 +17,16 @@ const Template = (props) => {
         padding: `${rhythm(2)} 0`,
       }}
     >
-      <Bio large />
+      {onFrontpage && <Bio />}
       {children()}
+      {!onFrontpage && <Bio />}
     </div>
   );
 };
 
 Template.propTypes = {
-  children: PropTypes.any.isRequired,
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default Template;

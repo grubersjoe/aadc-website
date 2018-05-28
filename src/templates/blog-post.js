@@ -17,7 +17,7 @@ const BlogPostTemplate = (props) => {
       <small
         style={{
           display: 'block',
-          marginBottom: rhythm(.75),
+          marginBottom: rhythm(0.75),
           marginTop: rhythm(-0.5),
           fontWeight: 700,
         }}
@@ -36,7 +36,7 @@ const BlogPostTemplate = (props) => {
       >
         {previous && (
           <li>
-            <Link to={'/' + previous.fields.slug} rel="prev">
+            <Link to={`/${previous.fields.slug}`} rel="prev">
               {' '}
               ← {previous.frontmatter.title}
             </Link>
@@ -45,7 +45,7 @@ const BlogPostTemplate = (props) => {
 
         {next && (
           <li>
-            <Link to={'/' + next.fields.slug} rel="next">
+            <Link to={`/${next.fields.slug}`} rel="next">
               {next.frontmatter.title} →{' '}
             </Link>
           </li>
@@ -65,7 +65,7 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug }}) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {

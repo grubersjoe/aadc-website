@@ -10,7 +10,7 @@ const BlogIndex = (props) => {
   const posts = get(props, 'data.allMarkdownRemark.edges');
 
   return (
-    <div>
+    <main>
       <Helmet title={siteTitle} />
       {posts.map(({ node }) => {
         const title = get(node, 'frontmatter.title') || node.fields.slug;
@@ -19,7 +19,7 @@ const BlogIndex = (props) => {
             <header>
               <h3
                 style={{
-                  marginBottom: rhythm(1/6),
+                  marginBottom: rhythm(1 / 6),
                 }}
               >
                 <Link to={node.fields.slug}>{title}</Link>
@@ -39,7 +39,7 @@ const BlogIndex = (props) => {
           </article>
         );
       })}
-    </div>
+    </main>
   );
 };
 

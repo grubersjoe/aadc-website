@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Team = () => (
-  <div>
-    juhu
-  </div>
+  <main>
+    <h1>Team</h1>
+    <p>Oh boi</p>
+  </main>
 );
 
 export default Team;
