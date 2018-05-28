@@ -15,21 +15,21 @@ const BlogIndex = (props) => {
       <Helmet title={siteTitle} />
       <Bio />
       {posts.map(({ node }) => {
-      const title = get(node, 'frontmatter.title') || node.fields.slug;
-      return (
-        <div key={node.fields.slug}>
-          <h3
-            style={{
-              marginBottom: rhythm(1 / 6),
-            }}
-          >
-            <Link to={node.fields.slug}>{title}</Link>
-          </h3>
-          <small>{node.frontmatter.date}</small>
-          <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-        </div>
-      );
-    })}
+        const title = get(node, 'frontmatter.title') || node.fields.slug;
+        return (
+          <div key={node.fields.slug}>
+            <h3
+              style={{
+                marginBottom: rhythm(1 / 6),
+              }}
+            >
+              <Link to={node.fields.slug}>{title}</Link>
+            </h3>
+            <small>{node.frontmatter.date}</small>
+            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -16,28 +16,30 @@ const Bio = () => (
       title="Start"
       style={{
         display: 'block',
-        marginRight: rhythm(1),
+        marginRight: rhythm(1.25),
       }}
     >
       <img
         src={logo}
         alt="HTWK Smart Driving"
         style={{
-          width: rhythm(30),
+          width: rhythm(34),
           height: 'auto',
           marginBottom: 0,
         }}
       />
     </Link>
 
-    <p style={{ marginBottom: 0 }}>
-      Hey! Willkommen auf der Website des Teams <strong>HTWK Smart Driving</strong> der Hochschule
-      für Technik, Wirtschaft und Kultur Leipzig. Wir sind eine studentische Forschungs&shy;gruppe,
-      die sich mit Technologien rund um das autonome Autofahren beschäftigt. Jedes Jahr nehmen wir
-      am{' '}
+    <p style={{ marginBottom: 0, fontSize: '110%' }}>
+      Wir sind das Team <strong>HTWK Smart Driving</strong> der{' '}
+      <a href="https://www.htwk-leipzig.de" target="_blank">
+        Hochschule für Technik, Wirtschaft und Kultur Leipzig
+      </a>. Als studentische Forschungs&shy;gruppe beschäftigen wir uns mit Technologien rund
+      um das autonome Autofahren. Seit 2016 nehmen wir am{' '}
       <a href="https://www.audi-autonomous-driving-cup.com" target="blank">
-        Audi Autonomous Driving Cup teil
-      </a>.
+        Audi Autonomous Driving Cup
+      </a>{' '}
+      teil.
     </p>
   </div>
 );

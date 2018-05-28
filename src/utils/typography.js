@@ -23,11 +23,14 @@ theme.overrideThemeStyles = () => ({
   'h1, h2, h3, a': {
     color: colorPrimary,
   },
-  a: {
+  'a': {
     textDecoration: 'none',
   },
   'p a': {
-    fontWeight: 500,
+    borderBottom: '1px solid transparent',
+  },
+  'p a:hover': {
+    borderBottom: `1px solid ${colorPrimary}`,
   },
 });
 
