@@ -1,21 +1,21 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import logo from './logo.svg';
+import logo from '../images/logo.svg';
 import { rhythm } from '../utils/typography';
 
 const Bio = () => (
   <div
     style={{
       display: 'flex',
-      marginBottom: rhythm(1.5),
+      marginBottom: rhythm(1.75),
     }}
   >
     <Link
       to="/"
       title="Start"
       style={{
-        display: 'block',
+        flex: `0 0 ${rhythm(5)}`,
         marginRight: rhythm(1.1),
       }}
     >
@@ -23,10 +23,9 @@ const Bio = () => (
         src={logo}
         alt="HTWK Smart Driving"
         style={{
-          width: rhythm(22),
-          height: 'auto',
           position: 'relative',
-          top: rhythm(0.06),
+          top: rhythm(0.04),
+          width: '100%',
           marginBottom: 0,
         }}
       />
