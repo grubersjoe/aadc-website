@@ -1,6 +1,6 @@
 import Typography from 'typography';
+import { colorPrimary } from './constants';
 
-const colorPrimary = '#00336f';
 const theme = {
   title: 'SmartDriving',
   baseFontSize: '20px',
@@ -43,6 +43,9 @@ theme.overrideThemeStyles = () => ({
   small: {
     fontSize: '85%',
   },
+  hr: {
+    height: '2px',
+  }
 });
 
 const typography = new Typography(theme);

@@ -1,18 +1,18 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
-import get from 'lodash/get';
 
 import { rhythm, scale } from '../utils/typography';
+import Button from '../components/Button';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
-  const siteTitle = get(props, 'data.site.siteMetadata.title');
+  const { title: siteTitle } = props.data.site.siteMetadata;
   const { previous, next } = props.pathContext;
 
   return (
     <div>
-      <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+      <Helmet title={`${post.frontmatter.title} – ${siteTitle}`} />
       <h1>{post.frontmatter.title}</h1>
       <small
         style={{
@@ -25,32 +25,33 @@ const BlogPostTemplate = (props) => {
         {post.frontmatter.date}
       </small>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <ul
+      <div
         style={{
           display: 'flex',
-          flexWrap: 'wrap',
           justifyContent: 'space-between',
-          listStyle: 'none',
-          padding: 0,
+          marginBottom: rhythm(1.75),
         }}
       >
-        {previous && (
-          <li>
-            <Link to={`/${previous.fields.slug}`} rel="prev">
-              {' '}
-              ← {previous.frontmatter.title}
+        <small style={{ flex: '0 0 50%' }}>
+          {previous && (
+            <Link to={`/${previous.fields.slug}`} rel="prev" title={previous.frontmatter.title}>
+              <Button>
+                Vorheriger Post
+              </Button>
             </Link>
-          </li>
-        )}
+          )}
+        </small>
 
-        {next && (
-          <li>
-            <Link to={`/${next.fields.slug}`} rel="next">
-              {next.frontmatter.title} →{' '}
+        <small style={{ flex: '0 0 50%', textAlign: 'right' }}>
+          {next && (
+            <Link to={`/${next.fields.slug}`} rel="next" title={next.frontmatter.title} className="btn">
+              <Button>
+                Nächster Post
+              </Button>
             </Link>
-          </li>
-        )}
-      </ul>
+          )}
+        </small>
+      </div>
     </div>
   );
 };
