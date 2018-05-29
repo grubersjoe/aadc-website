@@ -1,5 +1,5 @@
 import Typography from 'typography';
-import { colorPrimary } from './constants';
+import { colorPrimary, colorSecondary } from './constants';
 
 const theme = {
   title: 'SmartDriving',
@@ -9,7 +9,7 @@ const theme = {
   bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
   bodyWeight: 400,
   headerWeight: 700,
-  boldWeight: 700,
+  boldWeight: 600,
   googleFonts: [
     {
       name: 'Nunito',
@@ -28,17 +28,22 @@ const theme = {
 };
 
 theme.overrideThemeStyles = () => ({
-  'h1, h2, h3, a': {
+  'h1, h2, h3': {
     color: colorPrimary,
   },
+  'h1 a, h2 a, h3 a': {
+    color: 'inherit',
+  },
   a: {
+    fontWeight: 600,
+    color: colorSecondary,
     textDecoration: 'none',
   },
   'p a': {
     borderBottom: '1px solid transparent',
   },
   'p a:hover': {
-    borderBottom: `1px solid ${colorPrimary}`,
+    borderBottom: `1px solid ${colorSecondary}`,
   },
   small: {
     fontSize: '85%',

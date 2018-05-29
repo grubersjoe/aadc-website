@@ -31,20 +31,15 @@ const Bio = () => (
       />
     </Link>
 
-    <p
-      style={{
-        marginBottom: 0,
-      }}
-    >
-      Wir sind das Team <strong>HTWK Smart Driving</strong> der{' '}
+    <p style={{ marginBottom: 0, fontStyle: 'italic' }}>
+      Wir sind das Team „HTWK Smart Driving“ der{' '}
       <a href="https://www.htwk-leipzig.de" target="_blank" rel="noopener noreferrer">
         Hoch&shy;schule für Technik, Wirtschaft und Kultur Leipzig
       </a>. Als studen&shy;tische Forschungs&shy;gruppe beschäftigen wir uns mit Technologien rund
       um das autonome Autofahren. Seit 2015 nehmen wir am{' '}
       <a href="https://www.audi-autonomous-driving-cup.com" target="_blank" rel="noopener noreferrer">
         Audi Autonomous Driving Cup
-      </a>{' '}
-      teil.
+      </a>{' '}teil.
     </p>
   </div>
 );
