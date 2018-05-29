@@ -16,7 +16,7 @@ const Bio = () => (
       title="Start"
       style={{
         display: 'block',
-        marginRight: rhythm(1.25),
+        marginRight: rhythm(1.1),
       }}
     >
       <img

@@ -25,7 +25,7 @@ const Template = (props) => {
 };
 
 Template.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
 };
 
