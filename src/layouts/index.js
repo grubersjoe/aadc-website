@@ -6,7 +6,13 @@ import { rhythm } from '../utils/typography';
 
 const Template = (props) => {
   const { children, location } = props;
-  const onFrontpage = location.pathname === '/';
+
+  let rootPath = '/';
+  if (typeof __PREFIX_PATHS__ !== 'undefined' && __PREFIX_PATHS__) {
+    rootPath = `${__PATH_PREFIX__}/`;
+  }
+
+  const onFrontpage = location.pathname === rootPath;
 
   return (
     <div

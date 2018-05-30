@@ -5,7 +5,7 @@ module.exports = {
     description: 'Website des studentischen Teams HTWK Smart Driving',
     siteUrl: 'https://smart-driving.htwk-leipzig.de',
   },
-  pathPrefix: '/',
+  pathPrefix: '/new',
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',

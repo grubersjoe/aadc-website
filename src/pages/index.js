@@ -22,7 +22,7 @@ const BlogIndex = (props) => {
                   marginBottom: rhythm(1 / 6),
                 }}
               >
-                <Link to={node.fields.slug}>{title}</Link>
+                <Link to={`/${node.fields.slug}`}>{title}</Link>
               </h3>
               <small
                 style={{
