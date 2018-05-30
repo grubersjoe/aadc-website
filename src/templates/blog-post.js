@@ -1,14 +1,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/fontawesome-free-solid';
 
 import { rhythm, scale } from '../utils/typography';
-import Button from '../components/Button';
+import { colorSecondary } from '../utils/constants';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
   const { title: siteTitle } = props.data.site.siteMetadata;
   const { previous, next } = props.pathContext;
+  const trimLength = 40; // characters
 
   return (
     <div>
@@ -30,25 +33,24 @@ const BlogPostTemplate = (props) => {
           display: 'flex',
           justifyContent: 'space-between',
           marginBottom: rhythm(1.5),
+          fontWeight: 500,
         }}
       >
         <small style={{ flex: '0 0 50%' }}>
-          {previous && (
-            <Link to={`/${previous.fields.slug}`} rel="prev" title={previous.frontmatter.title}>
-              <Button>Vorheriger Post</Button>
+          {next && (
+            <Link to={`/${next.fields.slug}`} rel="next" style={{ color: colorSecondary }}>
+              <FontAwesomeIcon icon={faArrowLeft} style={{ marginRight: 8 }} />
+              {next.frontmatter.title.substr(0, trimLength)}
+              {next.frontmatter.title.length > trimLength && ' …'}
             </Link>
           )}
         </small>
-
         <small style={{ flex: '0 0 50%', textAlign: 'right' }}>
-          {next && (
-            <Link
-              to={`/${next.fields.slug}`}
-              rel="next"
-              title={next.frontmatter.title}
-              className="btn"
-            >
-              <Button>Nächster Post</Button>
+          {previous && (
+            <Link to={`/${previous.fields.slug}`} rel="prev" style={{ color: colorSecondary }}>
+              {previous.frontmatter.title.substr(0, trimLength)}
+              {previous.frontmatter.title.length > trimLength && ' …'}
+              <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: 8 }} />
             </Link>
           )}
         </small>

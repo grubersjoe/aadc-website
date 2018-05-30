@@ -12,22 +12,17 @@ const theme = {
   boldWeight: 600,
   googleFonts: [
     {
-      name: 'Nunito',
-      styles: ['400', '400i', '600', '700', '800'],
-    },
-    {
-      name: 'Source Sans Pro',
-      styles: ['400', '400i', '600', '600i', '700', '700i'],
-    },
-    {
       name: 'IBM Plex Sans',
-      styles: ['400', '400i', '600', '600i', '700', '700i'],
+      styles: ['400', '400i', '500', '600', '700'],
     },
   ],
   scaleRatio: 1.618,
 };
 
 theme.overrideThemeStyles = () => ({
+  h1: {
+    lineHeight: 1.3,
+  },
   'h1, h2, h3, a': {
     color: colorPrimary,
   },
