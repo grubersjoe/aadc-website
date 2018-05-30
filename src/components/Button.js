@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { colorSecondary } from '../utils/constants';
 
-const Button = (props) => (
+const Button = props => (
   <button
     style={{
       display: 'inline-block',
@@ -20,7 +20,8 @@ const Button = (props) => (
       verticalAlign: 'middle',
       border: '1px solid hsla(0, 0%, 0%, 0)',
       outline: 'none',
-      transition: 'color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out',
+      transition:
+        'color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out',
     }}
   >
     {props.children}

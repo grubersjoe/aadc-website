@@ -35,19 +35,20 @@ const BlogPostTemplate = (props) => {
         <small style={{ flex: '0 0 50%' }}>
           {previous && (
             <Link to={`/${previous.fields.slug}`} rel="prev" title={previous.frontmatter.title}>
-              <Button>
-                Vorheriger Post
-              </Button>
+              <Button>Vorheriger Post</Button>
             </Link>
           )}
         </small>
 
         <small style={{ flex: '0 0 50%', textAlign: 'right' }}>
           {next && (
-            <Link to={`/${next.fields.slug}`} rel="next" title={next.frontmatter.title} className="btn">
-              <Button>
-                Nächster Post
-              </Button>
+            <Link
+              to={`/${next.fields.slug}`}
+              rel="next"
+              title={next.frontmatter.title}
+              className="btn"
+            >
+              <Button>Nächster Post</Button>
             </Link>
           )}
         </small>

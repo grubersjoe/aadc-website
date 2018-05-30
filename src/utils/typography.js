@@ -28,29 +28,27 @@ const theme = {
 };
 
 theme.overrideThemeStyles = () => ({
-  'h1, h2, h3': {
+  'h1, h2, h3, a': {
     color: colorPrimary,
   },
-  'h1 a, h2 a, h3 a': {
-    color: 'inherit',
+  'h2, h3, h4, h5, h6': {
+    fontWeight: 600,
   },
   a: {
-    fontWeight: 600,
-    color: colorSecondary,
     textDecoration: 'none',
   },
   'p a': {
     borderBottom: '1px solid transparent',
   },
   'p a:hover': {
-    borderBottom: `1px solid ${colorSecondary}`,
+    borderBottom: `1px solid ${colorPrimary}`,
   },
   small: {
     fontSize: '85%',
   },
   hr: {
     height: '2px',
-  }
+  },
 });
 
 const typography = new Typography(theme);
