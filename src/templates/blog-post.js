@@ -32,7 +32,7 @@ const BlogPostTemplate = (props) => {
         style={{
           display: 'flex',
           justifyContent: 'space-between',
-          marginBottom: rhythm(1.5),
+          marginBottom: rhythm(1.75),
           fontWeight: 500,
         }}
       >

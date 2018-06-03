@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Nav from '../components/Nav';
 import Bio from '../components/Bio';
 
 import { rhythm } from '../utils/typography';
@@ -23,6 +24,7 @@ const Template = (props) => {
         padding: `${rhythm(2)} 0`,
       }}
     >
+      <Nav />
       {onFrontpage && <Bio />}
       {children()}
       {!onFrontpage && <Bio />}
