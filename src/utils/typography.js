@@ -1,15 +1,15 @@
 import Typography from 'typography';
-import { colorPrimary, colorText, colorSecondary } from './constants';
+import { colors } from './constants';
 
 const theme = {
   title: 'SmartDriving',
   baseFontSize: '19px',
   baseLineHeight: 1.5,
   headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
-  bodyColor: colorText,
+  bodyColor: colors.text,
   bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
   bodyWeight: 400,
-  headerWeight: 700,
+  headerWeight: 600,
   boldWeight: 600,
   googleFonts: [
     {
@@ -25,23 +25,20 @@ theme.overrideThemeStyles = () => ({
     lineHeight: 1.3,
   },
   'h1, h2, h3': {
-    color: colorPrimary,
-  },
-  'h2, h3, h4, h5, h6': {
-    fontWeight: 600,
+    color: colors.primary,
   },
   'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a': {
     color: 'inherit',
   },
   a: {
-    color: colorSecondary,
+    color: colors.secondary,
     textDecoration: 'none',
   },
   'p a': {
     borderBottom: '1px solid transparent',
   },
   'p a:hover': {
-    borderBottom: `1px solid ${colorSecondary}`,
+    borderBottom: `1px solid ${colors.secondary}`,
   },
   small: {
     fontSize: '85%',

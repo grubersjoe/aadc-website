@@ -27,7 +27,7 @@ const Template = (props) => {
       <Nav />
       {onFrontpage && <Bio />}
       {children()}
-      {!onFrontpage && <Bio />}
+      {!onFrontpage && <Bio footer />}
     </div>
   );
 };

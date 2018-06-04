@@ -5,7 +5,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/fontawesome-free-solid';
 
 import { rhythm, scale } from '../utils/typography';
-import { colorSecondary } from '../utils/constants';
+import { colors } from '../utils/constants';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
@@ -32,13 +32,12 @@ const BlogPostTemplate = (props) => {
         style={{
           display: 'flex',
           justifyContent: 'space-between',
-          marginBottom: rhythm(1.75),
           fontWeight: 500,
         }}
       >
         <small style={{ flex: '0 0 50%' }}>
           {next && (
-            <Link to={`/${next.fields.slug}`} rel="next" style={{ color: colorSecondary }}>
+            <Link to={`/${next.fields.slug}`} rel="next" style={{ color: colors.secondary }}>
               <FontAwesomeIcon icon={faArrowLeft} style={{ marginRight: 8 }} />
               {next.frontmatter.title.substr(0, trimLength)}
               {next.frontmatter.title.length > trimLength && ' …'}
@@ -47,7 +46,7 @@ const BlogPostTemplate = (props) => {
         </small>
         <small style={{ flex: '0 0 50%', textAlign: 'right' }}>
           {previous && (
-            <Link to={`/${previous.fields.slug}`} rel="prev" style={{ color: colorSecondary }}>
+            <Link to={`/${previous.fields.slug}`} rel="prev" style={{ color: colors.secondary }}>
               {previous.frontmatter.title.substr(0, trimLength)}
               {previous.frontmatter.title.length > trimLength && ' …'}
               <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: 8 }} />

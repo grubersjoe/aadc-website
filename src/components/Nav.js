@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import color from 'color';
 import { rhythm } from '../utils/typography';
-import { colorPrimary, colorText } from '../utils/constants';
+import { colors } from '../utils/constants';
 
 const Nav = () => {
   const Wrapper = styled('nav')`
@@ -15,14 +15,14 @@ const Nav = () => {
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease-in-out;
     font-size: 110%;
-    color: ${color(colorText)
+    color: ${color(colors.text)
     .fade(0.3)
     .string()};
-    color: ${colorText};
+    color: ${colors.text};
 
     &:hover {
       border-bottom: 2px solid
-        ${color(colorText)
+        ${color(colors.text)
     .fade(0.7)
     .string()};
     }
@@ -33,8 +33,8 @@ const Nav = () => {
   `;
 
   const activeStyle = {
-    color: colorPrimary,
-    borderBottom: `2px solid ${colorPrimary}`,
+    color: colors.primary,
+    borderBottom: `2px solid ${colors.primary}`,
   };
 
   const onBlog = (match, location) => {
