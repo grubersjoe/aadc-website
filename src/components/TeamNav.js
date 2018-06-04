@@ -36,10 +36,10 @@ const TeamNav = () => {
 
   return (
     <Wrapper>
-      <TeamLink to="/team/2017" activeStyle={activeStyle}>AADC 2017</TeamLink>
-      <TeamLink to="/team/2016" activeStyle={activeStyle}>AADC 2016</TeamLink>
-      <TeamLink to="/team/2015" activeStyle={activeStyle}>AADC 2015</TeamLink>
-      <TeamLink to="/team/2014" activeStyle={activeStyle}>AADC 2014</TeamLink>
+      <TeamLink to="/team/2017" activeStyle={activeStyle}>Team 2017</TeamLink>
+      <TeamLink to="/team/2016" activeStyle={activeStyle}>Team 2016</TeamLink>
+      <TeamLink to="/team/2015" activeStyle={activeStyle}>Team 2015</TeamLink>
+      <TeamLink to="/team/2014" activeStyle={activeStyle}>Team 2014</TeamLink>
     </Wrapper>
   );
 };

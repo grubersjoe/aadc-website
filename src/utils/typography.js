@@ -1,4 +1,5 @@
 import Typography from 'typography';
+import color from 'color';
 import { colors } from './constants';
 
 const theme = {
@@ -33,9 +34,6 @@ theme.overrideThemeStyles = () => ({
   h2: {
     marginBottom: '1rem',
   },
-  small: {
-    fontSize: '90%',
-  },
   a: {
     color: colors.secondary,
     textDecoration: 'none',
@@ -45,6 +43,12 @@ theme.overrideThemeStyles = () => ({
   },
   'p a:hover': {
     borderBottom: `1px solid ${colors.secondary}`,
+  },
+  small: {
+    fontSize: '90%',
+  },
+  strong: {
+    fontWeight: 500,
   },
   hr: {
     height: '2px',
