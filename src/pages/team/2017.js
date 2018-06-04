@@ -3,10 +3,11 @@ import TeamNav from '../../components/TeamNav';
 
 const Team = () => (
   <main>
-    <div style={{ display: 'flex' }}>
+    <div>
       <TeamNav />
-      <div style={{ flex: '1 0 auto' }}>
+      <div>
         <h1>Team 2017/2018</h1>
+        <p><strong>Teamsprecher: Lina Peters</strong></p>
       </div>
     </div>
   </main>

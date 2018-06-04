@@ -41,7 +41,7 @@ const Bio = (props) => {
         <a href="https://www.htwk-leipzig.de" target="_blank" rel="noopener noreferrer">
           Hochschule für Technik, Wirtschaft und Kultur Leipzig
         </a>. Als studentische Forschungs&shy;gruppe beschäftigen wir uns mit Technologien rund um
-        das autonome Autofahren. Seit 2015 nehmen wir am{' '}
+        das autonome Autofahren. Seit 2014 nehmen wir am{' '}
         <a
           href="https://www.audi-autonomous-driving-cup.com"
           target="_blank"
@@ -49,7 +49,7 @@ const Bio = (props) => {
         >
           Audi Autonomous Driving Cup
         </a>{' '}
-        teil.
+        (AADC) teil.
       </p>
     </div>
   );

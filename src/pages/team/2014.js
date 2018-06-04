@@ -6,7 +6,7 @@ const Team = () => (
     <div>
       <TeamNav />
       <div>
-        <h1>Team 2016/2017</h1>
+        <h1>Team 2014/2015</h1>
       </div>
     </div>
   </main>

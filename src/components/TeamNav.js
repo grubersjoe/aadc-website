@@ -6,24 +6,41 @@ import { rhythm } from '../utils/typography';
 import { colors } from '../utils/constants';
 
 const TeamNav = () => {
-  const NavbarLink = styled(Link)`
-    display: block;
-    padding: 0.6rem 0;
+  const Wrapper = styled('nav')`
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: ${rhythm(1.5)}
+  `;
+
+  const TeamLink = styled(Link)`
+    flex: 0 0 auto;
+    padding: 0 0.5rem 0.5rem 0.5rem;
     border-bottom: 2px solid ${color(colors.text).fade(0.9).string()};
+    transition: all 0.25s ease-in-out;
+    color: ${colors.text};
+    text-align: center;
+
+    &:hover {
+      border-bottom-color: ${color(colors.text).fade(0.7).string()};
+    }
+
+    &:first-of-type {
+      padding-left: 0;
+    }
   `;
 
   const activeStyle = {
-    fontWeight: 600,
     color: colors.primary,
-    // color: 'white',
+    borderBottomColor: colors.primary,
   };
 
   return (
-    <nav style={{ flex: '0 0 10rem', marginRight: '1.5rem' }}>
-      <NavbarLink to="/team/2017" activeStyle={activeStyle}>AADC 2017</NavbarLink>
-      <NavbarLink to="/team/2016" activeStyle={activeStyle}>AADC 2016</NavbarLink>
-      <NavbarLink to="/team/2015" activeStyle={activeStyle}>AADC 2015</NavbarLink>
-    </nav>
+    <Wrapper>
+      <TeamLink to="/team/2017" activeStyle={activeStyle}>AADC 2017</TeamLink>
+      <TeamLink to="/team/2016" activeStyle={activeStyle}>AADC 2016</TeamLink>
+      <TeamLink to="/team/2015" activeStyle={activeStyle}>AADC 2015</TeamLink>
+      <TeamLink to="/team/2014" activeStyle={activeStyle}>AADC 2014</TeamLink>
+    </Wrapper>
   );
 };
 

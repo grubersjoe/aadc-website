@@ -3,9 +3,9 @@ import TeamNav from '../../components/TeamNav';
 
 const Team = () => (
   <main>
-    <div style={{ display: 'flex' }}>
+    <div>
       <TeamNav />
-      <div style={{ flex: '1 0 auto' }}>
+      <div>
         <h1>Team 2015/2016</h1>
       </div>
     </div>

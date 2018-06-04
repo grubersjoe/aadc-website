@@ -14,17 +14,16 @@ const Nav = () => {
   const NavLink = styled(Link)`
     padding-bottom: 0.2rem;
     border-bottom: 2px solid transparent;
-    transition: all 0.2s ease-in-out;
-    font-size: 110%;
-    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+    font-size: 115%;
     color: ${colors.text};
 
     &:hover {
-      border-bottom: 2px solid${color(colors.text).fade(0.7).string()};
+      border-bottom: 2px solid ${color(colors.primary).fade(0.2).string()};
     }
 
     & + & {
-      margin-left: ${rhythm(1.1)};
+      margin-left: ${rhythm(1)};
     }
   `;
 
