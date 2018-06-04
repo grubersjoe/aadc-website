@@ -8,7 +8,7 @@ import { onBlog } from '../utils/helper';
 
 const Nav = () => {
   const Wrapper = styled('nav')`
-    margin-bottom: ${rhythm(1.5)};
+    margin-bottom: ${rhythm(1.75)};
   `;
 
   const NavLink = styled(Link)`
@@ -16,6 +16,7 @@ const Nav = () => {
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease-in-out;
     font-size: 110%;
+    font-weight: 500;
     color: ${colors.text};
 
     &:hover {

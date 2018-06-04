@@ -35,7 +35,12 @@ const BlogIndex = (props) => {
                 {node.frontmatter.date}
               </small>
             </header>
-            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            <p
+              dangerouslySetInnerHTML={{ __html: node.excerpt }}
+              style={{
+                marginBottom: rhythm(1.5),
+              }}
+            />
           </article>
         );
       })}

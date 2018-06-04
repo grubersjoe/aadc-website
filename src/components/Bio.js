@@ -12,8 +12,8 @@ const Bio = (props) => {
     <div
       style={{
         display: 'flex',
-        marginTop: footer ? rhythm(1.5) : 0,
-        marginBottom: footer ? 0 : rhythm(1.5),
+        marginTop: footer ? rhythm(1.75) : 0,
+        marginBottom: footer ? 0 : rhythm(1.75),
       }}
     >
       <Link

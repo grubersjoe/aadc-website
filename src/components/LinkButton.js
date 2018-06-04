@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import color from 'color';
 
 import Link from 'gatsby-link';
-import { colors } from '../utils/constants';
+import { colors, fontSizes } from '../utils/constants';
 
 // TODO: extract common btn styles
 const Button = styled(Link)`
@@ -13,9 +13,9 @@ const Button = styled(Link)`
   padding: 0.2rem 0.6rem;
   border: 2px solid ${colors.secondary};
   text-align: center;
-  whitespace: nowrap;
+  white-space: nowrap;
   vertical-align: middle;
-  font-size: 85%;
+  font-size: ${fontSizes.small};
   color: ${colors.secondary};
   transition: all 0.15s ease-in-out;
 

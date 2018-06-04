@@ -1,7 +1,12 @@
 const colors = {
   primary: 'hsl(212, 100%, 22%)',
   secondary: 'hsl(210, 64%, 37%)',
-  text: 'hsla(0, 0%, 0%, 0.85)',
+  text: 'hsl(212, 100%, 8%)',
 };
 
-export { colors };
+const fontSizes = {
+  large: '110%',
+  small: '90%',
+};
+
+export { colors, fontSizes };

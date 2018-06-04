@@ -16,7 +16,7 @@ const Template = (props) => {
         marginLeft: 'auto',
         marginRight: 'auto',
         maxWidth: rhythm(24),
-        padding: `${rhythm(1)} 0`,
+        padding: `${rhythm(1.5)} 0`,
       }}
     >
       <Nav />

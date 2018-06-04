@@ -36,7 +36,7 @@ const BlogPostTemplate = (props) => {
       >
         <small style={{ flex: '0 0 50%' }}>
           {next && (
-            <Link to={`/${next.fields.slug}`} rel="next" style={{ color: colors.secondary }}>
+            <Link to={`/${next.fields.slug}`} rel="next" style={{ color: colors.text }}>
               <FontAwesomeIcon icon={faArrowLeft} style={{ marginRight: 8 }} />
               {next.frontmatter.title.substr(0, trimLength)}
               {next.frontmatter.title.length > trimLength && ' …'}
@@ -45,7 +45,7 @@ const BlogPostTemplate = (props) => {
         </small>
         <small style={{ flex: '0 0 50%', textAlign: 'right' }}>
           {previous && (
-            <Link to={`/${previous.fields.slug}`} rel="prev" style={{ color: colors.secondary }}>
+            <Link to={`/${previous.fields.slug}`} rel="prev" style={{ color: colors.text }}>
               {previous.frontmatter.title.substr(0, trimLength)}
               {previous.frontmatter.title.length > trimLength && ' …'}
               <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: 8 }} />
