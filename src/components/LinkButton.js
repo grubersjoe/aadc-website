@@ -27,16 +27,11 @@ const Button = styled(Link)`
 
       &:focus {
         box-shadow: 0 0 0 0.15rem
-          ${color(colors.secondary)
-    .lighten(0.2)
-    .alpha(0.5)
-    .string()};
+          ${color(colors.secondary).lighten(0.2).alpha(0.5).string()};
       }
 
       &:hover {
-        background-color: ${color(colors.secondary)
-    .darken(0.12)
-    .string()};
+        background-color: ${color(colors.secondary).darken(0.12).string()};
       }
     `};
 `;

@@ -6,12 +6,15 @@ export function getRootPath() {
   return rootPath;
 }
 
-export function onBlog(match, location) {
+export function onPostPage(location) {
   const postUrlRegex = /\/\d{4}\/\d{2}\/.+$/;
-  return location.pathname === getRootPath() || postUrlRegex.test(location.pathname);
+  return postUrlRegex.test(location.pathname);
 }
 
-export function isSubpage(location) {
-  const pathPrefix = new RegExp(`^${getRootPath()}`);
-  return location.pathname.replace(pathPrefix, '').split('/').length > 1;
+export function blogActive(match, location) {
+  return location.pathname === getRootPath() || onPostPage(location);
+}
+
+export function teamActive(match, location) {
+  return location.pathname.indexOf('team') >= 0;
 }

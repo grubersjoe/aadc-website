@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import color from 'color';
 import { rhythm } from '../utils/typography';
 import { colors } from '../utils/constants';
-import { onBlog } from '../utils/helper';
+import { blogActive, teamActive } from '../utils/helper';
 
 const Nav = () => {
   const Wrapper = styled('nav')`
@@ -35,10 +35,10 @@ const Nav = () => {
 
   return (
     <Wrapper>
-      <NavLink to="/" activeStyle={activeStyle} isActive={onBlog}>
+      <NavLink to="/" activeStyle={activeStyle} isActive={blogActive}>
         Neuigkeiten
       </NavLink>
-      <NavLink to="/team" activeStyle={activeStyle} exact>
+      <NavLink to="/team/2017" activeStyle={activeStyle} isActive={teamActive}>
         Team
       </NavLink>
       <NavLink to="/publikationen" activeStyle={activeStyle} exact>

@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { isSubpage } from '../utils/helper';
+import { rhythm } from '../utils/typography';
+import { onPostPage } from '../utils/helper';
 import Nav from '../components/Nav';
 import Bio from '../components/Bio';
 
-import { rhythm } from '../utils/typography';
-
 const Template = (props) => {
   const { children, location } = props;
-  const onSubpage = isSubpage(location);
 
   return (
     <div
@@ -20,9 +18,9 @@ const Template = (props) => {
       }}
     >
       <Nav />
-      {!onSubpage && <Bio />}
+      {!onPostPage(location) && <Bio />}
       {children()}
-      {onSubpage && <Bio footer />}
+      {onPostPage(location) && <Bio footer />}
     </div>
   );
 };
