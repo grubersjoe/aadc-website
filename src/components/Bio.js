@@ -40,8 +40,8 @@ const Bio = (props) => {
         Wir sind das Team <strong>HTWK Smart Driving</strong> der{' '}
         <a href="https://www.htwk-leipzig.de" target="_blank" rel="noopener noreferrer">
           Hochschule für Technik, Wirtschaft und Kultur Leipzig
-        </a>. Als studentische Forschungs&shy;gruppe beschäftigen wir uns mit Technologien rund um das
-        autonome Autofahren. Seit 2015 nehmen wir am{' '}
+        </a>. Als studentische Forschungs&shy;gruppe beschäftigen wir uns mit Technologien rund um
+        das autonome Autofahren. Seit 2015 nehmen wir am{' '}
         <a
           href="https://www.audi-autonomous-driving-cup.com"
           target="_blank"
@@ -61,6 +61,6 @@ Bio.propTypes = {
 
 Bio.defaultProps = {
   footer: false,
-}
+};
 
 export default Bio;

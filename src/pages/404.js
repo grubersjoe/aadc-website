@@ -5,7 +5,9 @@ const NotFoundPage = () => (
   <div>
     <h1>404</h1>
     <p>Diese Seite existiert nicht.</p>
-    <LinkButton to="/" primary>Neuigkeiten</LinkButton>
+    <LinkButton to="/" primary>
+      Neuigkeiten
+    </LinkButton>
   </div>
 );
 

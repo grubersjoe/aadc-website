@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import color from 'color';
 import { rhythm } from '../utils/typography';
 import { colors } from '../utils/constants';
+import { getRootPath } from '../utils/helper';
 
 const Nav = () => {
   const Wrapper = styled('nav')`
@@ -38,8 +39,8 @@ const Nav = () => {
   };
 
   const onBlog = (match, location) => {
-    const blogPageRegex = /^\/\d{4}\/\d{2}\/.+$/;
-    return location.pathname === '/' || blogPageRegex.test(location.pathname);
+    const blogPageRegex = /\/\d{4}\/\d{2}\/.+$/;
+    return location.pathname === getRootPath() || blogPageRegex.test(location.pathname);
   };
 
   return (

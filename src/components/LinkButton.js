@@ -9,15 +9,15 @@ import { colors } from '../utils/constants';
 // TODO: extract common btn styles
 const Button = styled(Link)`
   display: inline-block;
-  border-radius: .25rem;
-  padding: .2rem .6rem;
+  border-radius: 0.25rem;
+  padding: 0.2rem 0.6rem;
   border: 2px solid ${colors.secondary};
-  textAlign: center;
-  whiteSpace: nowrap;
-  verticalAlign: middle;
+  text-align: center;
+  whitespace: nowrap;
+  vertical-align: middle;
   font-size: 85%;
   color: ${colors.secondary};
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 
   ${props =>
     props.primary &&
@@ -26,13 +26,19 @@ const Button = styled(Link)`
       color: white;
 
       &:focus {
-        box-shadow: 0 0 0 0.15rem ${color(colors.secondary).lighten(0.2).alpha(0.5).string()};
+        box-shadow: 0 0 0 0.15rem
+          ${color(colors.secondary)
+    .lighten(0.2)
+    .alpha(0.5)
+    .string()};
       }
 
       &:hover {
-        background-color: ${color(colors.secondary).darken(0.12).string()}
+        background-color: ${color(colors.secondary)
+    .darken(0.12)
+    .string()};
       }
-    `}
+    `};
 `;
 
 const LinkButton = props => <Button {...props}>{props.children}</Button>;
