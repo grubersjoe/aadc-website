@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import color from 'color';
 import { rhythm } from '../utils/typography';
 import { colors } from '../utils/constants';
-import { getRootPath } from '../utils/helper';
+import { onBlog } from '../utils/helper';
 
 const Nav = () => {
   const Wrapper = styled('nav')`
-    margin-bottom: ${rhythm(2)};
+    margin-bottom: ${rhythm(1.5)};
   `;
 
   const NavLink = styled(Link)`
@@ -16,16 +16,10 @@ const Nav = () => {
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease-in-out;
     font-size: 110%;
-    color: ${color(colors.text)
-    .fade(0.3)
-    .string()};
     color: ${colors.text};
 
     &:hover {
-      border-bottom: 2px solid
-        ${color(colors.text)
-    .fade(0.7)
-    .string()};
+      border-bottom: 2px solid${color(colors.text).fade(0.7).string()};
     }
 
     & + & {
@@ -36,11 +30,6 @@ const Nav = () => {
   const activeStyle = {
     color: colors.primary,
     borderBottom: `2px solid ${colors.primary}`,
-  };
-
-  const onBlog = (match, location) => {
-    const blogPageRegex = /\/\d{4}\/\d{2}\/.+$/;
-    return location.pathname === getRootPath() || blogPageRegex.test(location.pathname);
   };
 
   return (

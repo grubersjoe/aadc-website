@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getRootPath } from '../utils/helper';
+import { isSubpage } from '../utils/helper';
 import Nav from '../components/Nav';
 import Bio from '../components/Bio';
 
@@ -8,7 +8,7 @@ import { rhythm } from '../utils/typography';
 
 const Template = (props) => {
   const { children, location } = props;
-  const onFrontpage = location.pathname === getRootPath();
+  const onSubpage = isSubpage(location);
 
   return (
     <div
@@ -16,13 +16,13 @@ const Template = (props) => {
         marginLeft: 'auto',
         marginRight: 'auto',
         maxWidth: rhythm(24),
-        padding: `${rhythm(2)} 0`,
+        padding: `${rhythm(1)} 0`,
       }}
     >
       <Nav />
-      {onFrontpage && <Bio />}
+      {!onSubpage && <Bio />}
       {children()}
-      {!onFrontpage && <Bio footer />}
+      {onSubpage && <Bio footer />}
     </div>
   );
 };

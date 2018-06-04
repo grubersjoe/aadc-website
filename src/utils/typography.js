@@ -21,14 +21,20 @@ const theme = {
 };
 
 theme.overrideThemeStyles = () => ({
-  h1: {
-    lineHeight: 1.3,
-  },
   'h1, h2, h3': {
     color: colors.primary,
   },
   'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a': {
     color: 'inherit',
+  },
+  h1: {
+    lineHeight: 1.3,
+  },
+  h2: {
+    marginBottom: '1rem',
+  },
+  small: {
+    fontSize: '85%',
   },
   a: {
     color: colors.secondary,
@@ -40,11 +46,18 @@ theme.overrideThemeStyles = () => ({
   'p a:hover': {
     borderBottom: `1px solid ${colors.secondary}`,
   },
-  small: {
-    fontSize: '85%',
-  },
   hr: {
     height: '2px',
+  },
+  li: {
+    marginBottom: '0.5rem',
+  },
+  dt: {
+    fontWeight: 500,
+  },
+  dd: {
+    marginBottom: '1rem',
+    padding: '0.25rem 0 0 1.5rem',
   },
 });
 

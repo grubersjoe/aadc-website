@@ -22,7 +22,7 @@ const BlogPostTemplate = (props) => {
           display: 'block',
           marginBottom: rhythm(0.75),
           marginTop: rhythm(-0.5),
-          fontWeight: 700,
+          fontWeight: 600,
         }}
       >
         {post.frontmatter.date}
@@ -32,7 +32,6 @@ const BlogPostTemplate = (props) => {
         style={{
           display: 'flex',
           justifyContent: 'space-between',
-          fontWeight: 500,
         }}
       >
         <small style={{ flex: '0 0 50%' }}>
