@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
+import styled from 'styled-components';
 
 import { rhythm } from '../utils/typography';
 
@@ -9,38 +10,25 @@ const BlogIndex = (props) => {
   const siteTitle = get(props, 'data.site.siteMetadata.title');
   const posts = get(props, 'data.allMarkdownRemark.edges');
 
+  const Date = styled('small') `
+    display: block;
+    font-weight: 600;
+    margin-top: ${rhythm(0.25)};
+    margin-bottom: ${rhythm(0.25)};
+  `;
+
   return (
     <main>
       <Helmet title={siteTitle} />
       {posts.map(({ node }) => {
         const title = get(node, 'frontmatter.title') || node.fields.slug;
         return (
-          <article key={node.fields.slug} style={{ marginBottom: rhythm(1.25) }}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 6),
-                }}
-              >
-                <Link to={`/${node.fields.slug}`}>{title}</Link>
-              </h3>
-              <small
-                style={{
-                  display: 'block',
-                  fontWeight: 600,
-                  marginTop: rhythm(0.25),
-                  marginBottom: rhythm(0.25),
-                }}
-              >
-                {node.frontmatter.date}
-              </small>
-            </header>
-            <p
-              dangerouslySetInnerHTML={{ __html: node.excerpt }}
-              style={{
-                marginBottom: rhythm(1.5),
-              }}
-            />
+          <article key={node.fields.slug} style={{ marginBottom: rhythm(1.5) }}>
+            <h3 style={{ marginBottom: rhythm(0.25) }}>
+              <Link to={`/${node.fields.slug}`}>{title}</Link>
+            </h3>
+            <Date>{node.frontmatter.date}</Date>
+            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </article>
         );
       })}
@@ -58,7 +46,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: {fields: [frontmatter___date], order: DESC} 
+      sort: {fields: [frontmatter___date], order: DESC}
       filter: {fileAbsolutePath: {regex: "/(posts)/.*\\.md$/"}}
     ) {
       edges {
@@ -75,5 +63,4 @@ export const pageQuery = graphql`
       }
     }
   }
-
 `;
