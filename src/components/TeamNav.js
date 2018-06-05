@@ -7,16 +7,18 @@ import { colors } from '../utils/constants';
 
 const TeamNav = () => {
   const Wrapper = styled('nav')`
-    display: flex;
+    display: inline-flex;
     flex-wrap: nowrap;
     margin-bottom: ${rhythm(1.5)}
+    border-bottom: 2px solid ${color(colors.text).fade(0.9).string()};
   `;
 
   const TeamLink = styled(Link)`
     flex: 0 0 auto;
-    padding: 0 0.5rem 0.5rem 0.5rem;
-    border-bottom: 2px solid ${color(colors.text).fade(0.9).string()};
+    margin-bottom: -2px;
+    padding: 0 0 0.5rem;
     transition: all 0.25s ease-in-out;
+    border-bottom: 2px solid transparent;
     color: ${colors.text};
     text-align: center;
 
@@ -26,6 +28,10 @@ const TeamNav = () => {
 
     &:first-of-type {
       padding-left: 0;
+    }
+
+    & + & {
+      margin-left: 1.25rem;
     }
   `;
 

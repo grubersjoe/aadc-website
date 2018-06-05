@@ -11,7 +11,7 @@ const Avatar = (props) => {
 
   const Figure = styled('figure') `
     width: ${rhythm(size)};
-    margin-right: ${rhythm(1.25)};
+    margin-right: ${rhythm(1.125)};
     margin-bottom: ${rhythm(1)};
     text-align: center;
   `;
