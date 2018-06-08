@@ -58,7 +58,7 @@ const Avatar = (props) => {
 
   const Caption = styled('figcaption')`
     padding: .4rem .6rem;
-    background: ${color(colors.primary).fade(0.85).string()};
+    background-color: ${color(colors.primary).fade(0.85).string()};
     font-size: ${fontSizes.small};
     overflow: hidden;
     white-space: nowrap;

@@ -11,10 +11,7 @@ const Team = () => (
     <p>Teamspecherin: Lina Peters</p>
     <h2>Kernteam</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      <Avatar
-        imgUrl={avatarLina}
-        caption="Lina Peters"
-      />
+      <Avatar imgUrl={avatarLina} caption="Lina Peters" />
       <Avatar imgUrl={avatarNick} caption="Leo Binder" />
       <Avatar imgUrl={avatarNick} caption="Nick Fahrendorff" />
       <Avatar imgUrl={avatarFabi} caption="Fabian Freihube" />

@@ -5,9 +5,9 @@ const Publications = () => (
     <h1>Publikationen</h1>
     <h2>Software</h2>
     <ul>
-      <li><a href="https://smart-driving.htwk-leipzig.de/git/aadc/aadc-2017">Quelltext AADC 2017</a></li>
-      <li><a href="https://smart-driving.htwk-leipzig.de/git/aadc/aadc-2016">Quelltext AADC 2016</a></li>
-      <li><a href="https://smart-driving.htwk-leipzig.de/git/aadc/aadc-2015">Quelltext AADC 2015</a></li>
+      <li><a href="/files/src-aadc-2017.zip">Quelltext AADC 2017</a></li>
+      <li><a href="/files/src-aadc-2016.zip">Quelltext AADC 2016</a></li>
+      <li><a href="/files/src-aadc-2015.zip">Quelltext AADC 2015</a></li>
     </ul>
 
     <h2>Wissenschaftliche Arbeiten</h2>

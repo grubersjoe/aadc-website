@@ -38,11 +38,8 @@ theme.overrideThemeStyles = () => ({
     color: colors.secondary,
     textDecoration: 'none',
   },
-  'p a': {
-    borderBottom: '1px solid transparent',
-  },
-  'p a:hover': {
-    borderBottom: `1px solid ${colors.secondary}`,
+  'p a:hover, main a:hover': {
+    backgroundColor: color(colors.primary).fade(0.97).string(),
   },
   small: {
     fontSize: '90%',
