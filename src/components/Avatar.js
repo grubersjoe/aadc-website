@@ -16,9 +16,6 @@ const Avatar = (props) => {
     width: ${rhythm(size)};
     margin-right: ${rhythm(1.125)};
     margin-bottom: ${rhythm(1)};
-    text-align: center;
-    border-radius: .2rem;
-    overflow: hidden;
   `;
 
   const Overlay = styled('div')`
@@ -27,7 +24,8 @@ const Avatar = (props) => {
     justify-content: center;
     height: 100%;
     padding: 1rem;
-    background: ${color(colors.primary).alpha(0.7).string()};
+    background-color: ${color(colors.primary).alpha(0.7).string()};
+    border-radius: .15rem;
     transition: opacity .3s ease-in-out;
     opacity: 0;
     font-size: 150%;
@@ -38,7 +36,7 @@ const Avatar = (props) => {
     }
 
     a {
-      margin: 0.5rem;
+      margin: .5rem;
       color: white;
 
       &:hover {
@@ -54,15 +52,23 @@ const Avatar = (props) => {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center ${offsetY};
+    border-radius: .15rem;
   `;
 
   const Caption = styled('figcaption')`
-    padding: .4rem .6rem;
-    background-color: ${color(colors.primary).fade(0.85).string()};
+    margin-top: .4rem;
     font-size: ${fontSizes.small};
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    a {
+      color: ${colors.text};
+    }
+
+    a:hover {
+      color: ${colors.secondary};
+    }
   `;
 
 
@@ -84,7 +90,7 @@ const Avatar = (props) => {
           }
           {
             xing &&
-            <a href={xing} title="Xing" target="_blank">
+            <a href={xing} title="XING" target="_blank">
               <FontAwesomeIcon icon={faXing} />
             </a>
           }
@@ -96,7 +102,6 @@ const Avatar = (props) => {
           target="_blank"
           title="Bild in voller Auflösung"
           dangerouslySetInnerHTML={{ __html: caption }}
-          style={{ color: colors.text }}
         />
       </Caption>
     </Figure>
