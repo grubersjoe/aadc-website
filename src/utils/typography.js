@@ -22,6 +22,11 @@ const theme = {
 };
 
 theme.overrideThemeStyles = () => ({
+  // Typographys JS doesn't support breakpoints so far
+  // See https://github.com/KyleAMathews/typography.js/issues/75
+  // This is a very ugly workaround:
+  '@media (max-width: 767px) { html { font-size: 16px } }': {},
+
   'h1, h2, h3': {
     color: colors.primary,
   },

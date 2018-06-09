@@ -10,7 +10,7 @@ const BlogIndex = (props) => {
   const siteTitle = get(props, 'data.site.siteMetadata.title');
   const posts = get(props, 'data.allMarkdownRemark.edges');
 
-  const Date = styled('small') `
+  const Date = styled('small')`
     display: block;
     font-weight: 600;
     margin-top: ${rhythm(0.25)};

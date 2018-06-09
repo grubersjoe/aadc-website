@@ -17,7 +17,8 @@ const Team = () => (
     <TeamNav />
     <h1>Team Smart Driving 2017/2018</h1>
     <p>
-      Teamspecherin: Lina Peters &ndash; <a href="mailto:lina.peters@stud.htwk-leipzig.de">lina.peters@stud.htwk-leipzig.de</a>
+      Teamspecherin: Lina Peters &ndash;{' '}
+      <a href="mailto:lina.peters@stud.htwk-leipzig.de">lina.peters@stud.htwk-leipzig.de</a>
     </p>
 
     <h2>Kernteam</h2>

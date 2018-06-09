@@ -15,8 +15,11 @@ const Nav = () => {
     padding-bottom: 0.2rem;
     border-bottom: 2px solid transparent;
     transition: all 0.25s ease-in-out;
-    font-size: 115%;
     color: ${colors.text};
+
+    @media (min-width: 360px) {
+      font-size: 115%;
+    }
 
     &:hover {
       border-bottom: 2px solid ${color(colors.primary).fade(0.2).string()};

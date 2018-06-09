@@ -13,9 +13,13 @@ const Avatar = (props) => {
   const { website, github, xing } = props.profiles;
 
   const Figure = styled('figure')`
-    width: ${rhythm(size)};
-    margin-right: ${rhythm(1.125)};
+    width: 100%;
     margin-bottom: ${rhythm(1)};
+
+    @media (min-width: 768px) {
+      width: ${rhythm(size)}
+      margin-right: ${rhythm(1.125)};
+    }
   `;
 
   const Overlay = styled('div')`
@@ -25,18 +29,17 @@ const Avatar = (props) => {
     height: 100%;
     padding: 1rem;
     background-color: ${color(colors.primary).alpha(0.7).string()};
-    border-radius: .15rem;
-    transition: opacity .3s ease-in-out;
+    border-radius: 0.15rem;
+    transition: opacity 0.3s ease-in-out;
     opacity: 0;
     font-size: 150%;
-
 
     &:hover {
       opacity: ${Object.keys(props.profiles).length ? 1 : 0};
     }
 
     a {
-      margin: .5rem;
+      margin: 0.5rem;
       color: white;
 
       &:hover {
@@ -47,20 +50,27 @@ const Avatar = (props) => {
 
   const Image = styled('div')`
     width: 100%;
-    height: ${rhythm(size * (5 / 4))};
+    height: calc(100vw - 2.5rem); // PageContainer has a padding-{left,right} of 1.25rem
     background-image: url(${imgUrl});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center ${offsetY};
-    border-radius: .15rem;
+    border-radius: 0.15rem;
+
+    @media (min-width: 768px) {
+      height: ${rhythm(size * (5 / 4))};
+    }
   `;
 
   const Caption = styled('figcaption')`
-    margin-top: .4rem;
-    font-size: ${fontSizes.small};
+    margin-top: 0.4rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    @media (min-width: 768px) {
+      font-size: ${fontSizes.small};
+    }
 
     a {
       color: ${colors.text};
@@ -71,29 +81,25 @@ const Avatar = (props) => {
     }
   `;
 
-
   return (
     <Figure {...props}>
       <Image>
         <Overlay>
-          {
-            website &&
+          {website && (
             <a href={website} title="Website" target="_blank">
               <FontAwesomeIcon icon={faLink} />
             </a>
-          }
-          {
-            github &&
+          )}
+          {github && (
             <a href={github} title="GitHub" target="_blank">
               <FontAwesomeIcon icon={faGithub} />
             </a>
-          }
-          {
-            xing &&
+          )}
+          {xing && (
             <a href={xing} title="XING" target="_blank">
               <FontAwesomeIcon icon={faXing} />
             </a>
-          }
+          )}
         </Overlay>
       </Image>
       <Caption>
@@ -108,7 +114,6 @@ const Avatar = (props) => {
   );
 };
 
-
 Avatar.propTypes = {
   imgUrl: PropTypes.string.isRequired,
   caption: PropTypes.string.isRequired,
@@ -122,6 +127,5 @@ Avatar.defaultProps = {
   offsetY: '10%',
   profiles: {},
 };
-
 
 export default Avatar;
