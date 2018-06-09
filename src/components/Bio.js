@@ -9,7 +9,7 @@ const Bio = (props) => {
   const { footer } = props;
 
   return (
-    <div
+    <article
       style={{
         display: 'flex',
         marginTop: footer ? rhythm(1.75) : 0,
@@ -51,7 +51,7 @@ const Bio = (props) => {
         </a>{' '}
         (AADC) teil.
       </p>
-    </div>
+    </article>
   );
 };
 

@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/fontawesome-free-solid';
 
-import { rhythm, scale } from '../utils/typography';
+import { rhythm } from '../utils/typography';
 import { colors } from '../utils/constants';
 
 const BlogPostTemplate = (props) => {

@@ -24,7 +24,7 @@ const BlogIndex = (props) => {
         const title = get(node, 'frontmatter.title') || node.fields.slug;
         return (
           <article key={node.fields.slug} style={{ marginBottom: rhythm(1.5) }}>
-            <h3 style={{ marginBottom: rhythm(0.25) }}>
+            <h3 style={{ marginBottom: 0 }}>
               <Link to={`/${node.fields.slug}`}>{title}</Link>
             </h3>
             <Date>{node.frontmatter.date}</Date>
