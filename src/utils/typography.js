@@ -37,9 +37,10 @@ theme.overrideThemeStyles = () => ({
   a: {
     color: colors.secondary,
     textDecoration: 'none',
+    transition: '0.25s background-color ease-in-out',
   },
-  'p a:hover, main a:hover': {
-    backgroundColor: color(colors.primary).fade(0.97).string(),
+  'p a:hover, li a:hover, dt a:hover, dd a:hover': {
+    backgroundColor: color(colors.secondary).fade(0.96).string(),
   },
   small: {
     fontSize: '90%',
