@@ -66,12 +66,11 @@
     "url": "git+https://smart-driving.htwk-leipzig.de/git/aadc/website-gatsby.git"
   },
   "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "develop": "gatsby develop",
-    "format": "prettier-eslint --write '*.js' 'src/**/*.js' 'src/**/*.md'",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "precommit": "npm run format && npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx gatsby build",
+    "dev": "npx gatsby develop",
+    "develop": "npx gatsby develop",
+    "format": "npx prettier-eslint --write '*.js' 'src/**/*.js' 'src/**/*.md'",
+    "lint": "npx eslint --ext .js,.jsx --ignore-pattern public .",
+    "precommit": "npm run format && npm run lint"
   }
 }
