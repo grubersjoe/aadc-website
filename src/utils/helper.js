@@ -6,6 +6,10 @@ export function getRootPath() {
   return rootPath;
 }
 
+export function getPageTitle(data) {
+  return data.site.siteMetadata.title;
+}
+
 export function onPostPage(location) {
   const postUrlRegex = /\/\d{4}\/\d{2}\/.+$/;
   return postUrlRegex.test(location.pathname);

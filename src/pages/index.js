@@ -1,14 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import { rhythm } from '../utils/typography';
+import { getPageTitle } from '../utils/helper';
 
 const BlogIndex = (props) => {
-  const siteTitle = get(props, 'data.site.siteMetadata.title');
-  const posts = get(props, 'data.allMarkdownRemark.edges');
+  const posts = props.data.allMarkdownRemark.edges;
 
   const Date = styled('small')`
     display: block;
@@ -19,9 +19,9 @@ const BlogIndex = (props) => {
 
   return (
     <main>
-      <Helmet title={siteTitle} />
+      <Helmet title={`Neuigkeiten – ${getPageTitle(props.data)}`} />
       {posts.map(({ node }) => {
-        const title = get(node, 'frontmatter.title') || node.fields.slug;
+        const title = node.frontmatter.title || node.fields.slug;
         return (
           <article key={node.fields.slug} style={{ marginBottom: rhythm(1.5) }}>
             <h3 style={{ marginBottom: 0 }}>
@@ -36,9 +36,13 @@ const BlogIndex = (props) => {
   );
 };
 
+BlogIndex.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
 export default BlogIndex;
 
-export const pageQuery = graphql`
+export const PageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {

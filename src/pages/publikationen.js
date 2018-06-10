@@ -1,11 +1,14 @@
 import React from 'react';
-import { getRootPath } from '../utils/helper';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { getPageTitle, getRootPath } from '../utils/helper';
 
-const Publications = () => {
+const Publications = (props) => {
   const rootPath = getRootPath();
 
   return (
     <main>
+      <Helmet title={`Publikationen – ${getPageTitle(props.data)}`} />
       <h1>Publikationen</h1>
       <h2>Software</h2>
       <ul>
@@ -39,4 +42,19 @@ const Publications = () => {
   );
 };
 
+Publications.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
 export default Publications;
+
+export const PageQuery = graphql`
+  query PublicationsQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;
+

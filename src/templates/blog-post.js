@@ -4,13 +4,12 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/fontawesome-free-solid';
-
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
+import { getPageTitle } from '../utils/helper';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
-  const { title: siteTitle } = props.data.site.siteMetadata;
   const { previous, next } = props.pathContext;
 
   const PostNav = styled('div')`
@@ -45,7 +44,7 @@ const BlogPostTemplate = (props) => {
 
   return (
     <div>
-      <Helmet title={`${post.frontmatter.title} – ${siteTitle}`} />
+      <Helmet title={`${post.frontmatter.title} – ${getPageTitle(props.data)}`} />
       <h1>{post.frontmatter.title}</h1>
       <small
         style={{

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import TeamNav from '../../components/TeamNav';
 import Avatar from '../../components/Avatar';
 import {
@@ -10,9 +12,11 @@ import {
   avatarPhilipp,
 } from '../../images/avatars';
 import { team2016 } from '../../images/team';
+import { getPageTitle } from '../../utils/helper';
 
-const Team = () => (
+const Team = props => (
   <main>
+    <Helmet title={`Team 2016/2017 – ${getPageTitle(props.data)}`} />
     <TeamNav />
     <h1>Team Smart Driving 2016/2017</h1>
     <p>
@@ -48,5 +52,20 @@ const Team = () => (
     </div>
   </main>
 );
+
+Team.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
+
+export const PageQuery = graphql`
+  query Team2016Query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;
 
 export default Team;
