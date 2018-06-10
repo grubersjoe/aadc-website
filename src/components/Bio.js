@@ -21,15 +21,12 @@ const Bio = (props) => {
   const LogoLink = styled(Link)`
     display: block;
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: ${rhythm(1)};
 
     @media (min-width: 768px) {
       flex: 0 0 ${rhythm(5)};
       width: auto;
       margin-bottom: 0;
-      margin-left: 0;
       margin-right: ${rhythm(1.125)};
     }
   `;
