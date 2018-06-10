@@ -10,6 +10,7 @@ const Wrapper = styled('footer')`
 `;
 
 const MutedLink = styled(Link)`
+  padding-bottom: 0.2rem;
   color: ${colors.textMuted};
   font-weight: 500;
   
@@ -18,14 +19,21 @@ const MutedLink = styled(Link)`
   }
 `;
 
-const Footer = () => {
-  return (
-    <Wrapper>
-      <MutedLink to="/impressum">
-        Impressum
-      </MutedLink>
-    </Wrapper>
-  );
+const activeStyle = {
+  color: colors.primary,
+  borderBottom: `2px solid ${colors.primary}`,
 };
+
+const Footer = () => (
+  <Wrapper>
+    <MutedLink
+      to="/impressum"
+      activeStyle={activeStyle}
+      isActive={(match, location) => location.pathname.indexOf('impressum') >= 0}
+    >
+      Impressum
+    </MutedLink>
+  </Wrapper>
+);
 
 export default Footer;

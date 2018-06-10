@@ -37,6 +37,9 @@ theme.overrideThemeStyles = () => ({
   h2: {
     marginBottom: '1rem',
   },
+  h4: {
+    marginBottom: '0.75rem',
+  },
   a: {
     color: colors.secondary,
     textDecoration: 'none',
