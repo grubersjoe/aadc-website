@@ -30,7 +30,7 @@ const Team = props => (
 
     <h2>Kernteam</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      <Avatar imgUrl={avatarFabi} caption="Fabian Freihube" />`
+      <Avatar imgUrl={avatarFabi} caption="Fabian Freihube" />
       <Avatar imgUrl={avatarNick} caption="Nick Fahrendorff" />
       <Avatar
         imgUrl={avatarJo}
