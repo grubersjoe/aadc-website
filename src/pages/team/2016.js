@@ -9,6 +9,7 @@ import {
   avatarNick,
   avatarPhilipp,
 } from '../../images/avatars';
+import { team2016 } from '../../images/team';
 
 const Team = () => (
   <main>
@@ -18,6 +19,10 @@ const Team = () => (
       Teamspecher: Fabian Freihube &ndash;{' '}
       <a href="mailto:fabian.freihube@stud.htwk-leipzig.de">fabian.freihube@stud.htwk-leipzig.de</a>
     </p>
+
+    <a href={team2016} target="_blank">
+      <img src={team2016} alt="Team Smart Driving 2017/2018" />
+    </a>
 
     <h2>Kernteam</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -39,6 +44,7 @@ const Team = () => (
     <h2>Freie Mitarbeiter</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
       <Avatar imgUrl={avatarPhilipp} caption="Philipp Kleinhenz" />
+      <Avatar caption="Sonja Mauersberger" />
     </div>
   </main>
 );

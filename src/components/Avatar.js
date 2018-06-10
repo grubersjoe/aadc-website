@@ -7,6 +7,7 @@ import { faLink } from '@fortawesome/fontawesome-free-solid';
 import { faGithub, faXing } from '@fortawesome/fontawesome-free-brands';
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
+import { avatarNone } from '../images/avatars';
 
 const Avatar = (props) => {
   const { size, imgUrl, caption, offsetY } = props;
@@ -81,6 +82,18 @@ const Avatar = (props) => {
     }
   `;
 
+  const fallbackAvatar = imgUrl.indexOf('svg') > -1;
+  const captionText = fallbackAvatar ? (
+    <span dangerouslySetInnerHTML={{ __html: caption }} />
+  ) : (
+    <a
+      href={imgUrl}
+      target="_blank"
+      title="Foto in voller Auflösung"
+      dangerouslySetInnerHTML={{ __html: caption }}
+    />
+  );
+
   return (
     <Figure {...props}>
       <Image>
@@ -102,20 +115,13 @@ const Avatar = (props) => {
           )}
         </Overlay>
       </Image>
-      <Caption>
-        <a
-          href={imgUrl}
-          target="_blank"
-          title="Bild in voller Auflösung"
-          dangerouslySetInnerHTML={{ __html: caption }}
-        />
-      </Caption>
+      <Caption>{captionText}</Caption>
     </Figure>
   );
 };
 
 Avatar.propTypes = {
-  imgUrl: PropTypes.string.isRequired,
+  imgUrl: PropTypes.string,
   caption: PropTypes.string.isRequired,
   size: PropTypes.number,
   offsetY: PropTypes.string,
@@ -123,6 +129,7 @@ Avatar.propTypes = {
 };
 
 Avatar.defaultProps = {
+  imgUrl: avatarNone,
   size: 6,
   offsetY: '10%',
   profiles: {},

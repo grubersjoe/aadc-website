@@ -2,7 +2,6 @@ import React from 'react';
 import TeamNav from '../../components/TeamNav';
 import Avatar from '../../components/Avatar';
 import {
-  avatarNone,
   avatarFabi,
   avatarFranz,
   avatarLeo,
@@ -11,6 +10,7 @@ import {
   avatarNick,
   avatarPhilipp,
 } from '../../images/avatars';
+import { team2017 } from '../../images/team';
 
 const Team = () => (
   <main>
@@ -20,6 +20,10 @@ const Team = () => (
       Teamspecherin: Lina Peters &ndash;{' '}
       <a href="mailto:lina.peters@stud.htwk-leipzig.de">lina.peters@stud.htwk-leipzig.de</a>
     </p>
+
+    <a href={team2017} target="_blank">
+      <img src={team2017} alt="Team Smart Driving 2017/2018" />
+    </a>
 
     <h2>Kernteam</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -42,7 +46,7 @@ const Team = () => (
           xing: 'https://www.xing.com/profile/Jonathan_Gruber',
         }}
       />
-      <Avatar imgUrl={avatarNone} caption="Fabian Sauer" />
+      <Avatar caption="Fabian Sauer" />
     </div>
   </main>
 );
