@@ -4,6 +4,8 @@ This is the [Gatsby](https://www.gatsbyjs.org/) based website of the HTWK Smart 
 
 ## Development
 
+You might want to use [yarn](https://yarnpkg.com/lang/en/) instead of npm.
+
 ```
 npm install
 npm run dev
