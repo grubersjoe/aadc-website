@@ -28,13 +28,13 @@ const Publications = (props) => {
       <dl style={{ marginBottom: rhythm(1) }}>
         <dt>Fabian Freihube (2016)</dt>
         <dd>
-          <a href={`${rootPath}files/ba_freihube.pdf`}>
+          <a href={`${rootPath}files/ba_freihube.pdf`} target="_blank">
             Entwurf und Realisierung autonomer Fahrfunktionen in Modellfahrzeugen
           </a>
         </dd>
         <dt>Georg Jenschmischek (2016)</dt>
         <dd>
-          <a href={`${rootPath}files/ma_jenschmischek.pdf`}>
+          <a href={`${rootPath}files/ma_jenschmischek.pdf`} target="_blank">
             Digitale Bildverarbeitung auf einem selbstkonstruierten Modellfahrzeug
           </a>
         </dd>
