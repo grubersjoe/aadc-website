@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'gatsby-link';
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
 
@@ -9,7 +8,7 @@ const Wrapper = styled('footer')`
   font-size: ${fontSizes.small};
 `;
 
-const MutedLink = styled(Link)`
+const Link = styled('a')`
   padding-bottom: 0.2rem;
   color: ${colors.textMuted};
   font-weight: 500;
@@ -19,20 +18,14 @@ const MutedLink = styled(Link)`
   }
 `;
 
-const activeStyle = {
-  color: colors.primary,
-  borderBottom: `2px solid ${colors.primary}`,
-};
-
 const Footer = () => (
   <Wrapper>
-    <MutedLink
-      to="/impressum"
-      activeStyle={activeStyle}
-      isActive={(match, location) => location.pathname.indexOf('impressum') >= 0}
+    <Link
+      href="https://www.htwk-leipzig.de/hochschule/kontakt/impressum/"
+      target="_blank"
     >
       Impressum
-    </MutedLink>
+    </Link>
   </Wrapper>
 );
 
