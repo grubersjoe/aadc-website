@@ -10,6 +10,7 @@ const theme = {
   bodyColor: colors.text,
   bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
   bodyWeight: 400,
+  blockMarginBottom: 0.85,
   headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
   headerWeight: 600,
   scaleRatio: 1.618,
