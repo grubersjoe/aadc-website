@@ -57,7 +57,6 @@ Team.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
-
 export const PageQuery = graphql`
   query Team2016Query {
     site {

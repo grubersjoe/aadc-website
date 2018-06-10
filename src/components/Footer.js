@@ -12,7 +12,7 @@ const Link = styled('a')`
   padding-bottom: 0.2rem;
   color: ${colors.textMuted};
   font-weight: 500;
-  
+
   &:hover {
     color: ${colors.secondary};
   }
@@ -20,10 +20,7 @@ const Link = styled('a')`
 
 const Footer = () => (
   <Wrapper>
-    <Link
-      href="https://www.htwk-leipzig.de/hochschule/kontakt/impressum/"
-      target="_blank"
-    >
+    <Link href="https://www.htwk-leipzig.de/hochschule/kontakt/impressum/" target="_blank">
       Impressum
     </Link>
   </Wrapper>
