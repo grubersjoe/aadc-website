@@ -6,7 +6,7 @@ build:
   script:
   - yarn install
   - ./node_modules/.bin/gatsby build --prefix-paths
-  - cp -r ./public/* /var/www/html/new
+  - cp -r ./public/* /var/www/html
   artifacts:
     name: website
     paths:
