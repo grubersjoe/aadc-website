@@ -1,17 +1,47 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
+import styled from 'styled-components';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/fontawesome-free-solid';
 
 import { rhythm } from '../utils/typography';
-import { colors } from '../utils/constants';
+import { colors, fontSizes } from '../utils/constants';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
   const { title: siteTitle } = props.data.site.siteMetadata;
   const { previous, next } = props.pathContext;
-  const trimLength = 40; // characters
+
+  const PostNav = styled('div')`
+    display: flex;
+    justify-content: space-between;
+    margin-top: ${rhythm(1.5)};
+  `;
+
+  const LinkWrapper = styled('div')`
+    flex: 0 0 48%;
+    overflow: hidden;
+    font-size: ${fontSizes.small};
+
+    > a {
+      display: flex;
+      align-items: center;
+    }
+  `;
+
+  const LinkIcon = styled(FontAwesomeIcon)`
+    color: ${colors.secondary};
+    height: 100%;
+  `;
+
+  const LinkText = styled('span')`
+    flex-grow: 1;
+    color: ${colors.text};
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  `;
 
   return (
     <div>
@@ -28,32 +58,24 @@ const BlogPostTemplate = (props) => {
         {post.frontmatter.date}
       </small>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          marginTop: rhythm(1.5),
-        }}
-      >
-        <small style={{ flex: '0 0 50%' }}>
+      <PostNav>
+        <LinkWrapper>
           {next && (
-            <Link to={`/${next.fields.slug}`} rel="next" style={{ color: colors.text }}>
-              <FontAwesomeIcon icon={faArrowLeft} style={{ marginRight: 8 }} />
-              {next.frontmatter.title.substr(0, trimLength)}
-              {next.frontmatter.title.length > trimLength && ' …'}
+            <Link to={`/${next.fields.slug}`} rel="next">
+              <LinkIcon icon={faArrowLeft} style={{ marginRight: 8 }} />
+              <LinkText>{next.frontmatter.title}</LinkText>
             </Link>
           )}
-        </small>
-        <small style={{ flex: '0 0 50%', textAlign: 'right' }}>
+        </LinkWrapper>
+        <LinkWrapper>
           {previous && (
-            <Link to={`/${previous.fields.slug}`} rel="prev" style={{ color: colors.text }}>
-              {previous.frontmatter.title.substr(0, trimLength)}
-              {previous.frontmatter.title.length > trimLength && ' …'}
-              <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: 8 }} />
+            <Link to={`/${previous.fields.slug}`} rel="previous">
+              <LinkText style={{ textAlign: 'right' }}>{previous.frontmatter.title}</LinkText>
+              <LinkIcon icon={faArrowRight} style={{ marginLeft: 8 }} />
             </Link>
           )}
-        </small>
-      </div>
+        </LinkWrapper>
+      </PostNav>
     </div>
   );
 };
