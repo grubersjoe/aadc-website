@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { rhythm } from '../utils/typography';
 import { getPageTitle, getRootPath } from '../utils/helper';
 
 const Publications = (props) => {
@@ -24,7 +25,7 @@ const Publications = (props) => {
       </ul>
 
       <h2>Wissenschaftliche Arbeiten</h2>
-      <dl>
+      <dl style={{ marginBottom: rhythm(1) }}>
         <dt>Fabian Freihube (2016)</dt>
         <dd>
           <a href={`${rootPath}files/ba_freihube.pdf`}>

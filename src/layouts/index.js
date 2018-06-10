@@ -5,6 +5,7 @@ import { rhythm } from '../utils/typography';
 import { onPostPage } from '../utils/helper';
 import Nav from '../components/Nav';
 import Bio from '../components/Bio';
+import Footer from '../components/Footer';
 
 const Template = (props) => {
   const { children, location } = props;
@@ -26,6 +27,7 @@ const Template = (props) => {
       {!onPostPage(location) && <Bio />}
       {children()}
       {onPostPage(location) && <Bio footer />}
+      <Footer />
     </PageContainer>
   );
 };
