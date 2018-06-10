@@ -2,6 +2,9 @@ import Typography from 'typography';
 import color from 'color';
 import { colors } from './constants';
 
+// eslint-disable-next-line
+import 'typeface-ibm-plex-sans';
+
 const theme = {
   title: 'SmartDriving',
   baseFontSize: '18px',
@@ -14,12 +17,6 @@ const theme = {
   headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
   headerWeight: 600,
   scaleRatio: 1.618,
-  googleFonts: [
-    {
-      name: 'IBM Plex Sans',
-      styles: ['400', '400i', '500', '600', '700'],
-    },
-  ],
 };
 
 theme.overrideThemeStyles = () => ({
