@@ -27,12 +27,10 @@ theme.overrideThemeStyles = () => ({
 
   'h1, h2, h3': {
     color: colors.primary,
+    lineHeight: 1.4,
   },
   'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a': {
     color: 'inherit',
-  },
-  h1: {
-    lineHeight: 1.3,
   },
   h2: {
     marginBottom: '1rem',
