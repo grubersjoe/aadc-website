@@ -1,8 +1,16 @@
 ---
-title: Teilnahme am AADC 2018 gesichert
-date: "2018-05-25"
+title: Erfolgreiche Nominierung für den AADC 2018
+date: "2018-05-24"
 ---
 
-Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet. »Wie ein Hund! « sagte er, es war, als sollte die Scham ihn überleben. Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt.
+Wir freuen uns mitteilen zu können, dass wir uns auch in diesem Jahr erfolgreich für den Audi Autonomus Driving Cup qualifizieren konnten. Dies ist für unser Team bereits die vierte Nominierung in Folge. Beim diesjährigen Wettbewerb gibt es einige interessante Neuerungen:
 
-Und es war ihnen wie eine Bestätigung ihrer neuen Träume und guten Absichten, als am Ziele ihrer Fahrt die Tochter als erste sich erhob und ihren jungen Körper dehnte. »Es ist ein eigentümlicher Apparat«, sagte der Offizier zu dem Forschungsreisenden und überblickte mit einem gewissermaßen bewundernden Blick den ihm doch wohlbekannten Apparat.
+* der AADC wurde erstmals europaweit ausgeschrieben, statt wie bisher nur in Deutschland, Österreich und der Schweiz
+* infolgedessen ist die Konkurrenz deutlich gewachsen und internationaler geworden
+* der Wettbewerb ist zukünftig englischsprachig
+
+<!-- Umso erfreulicher ist es für uns, dass wir die Jury auch dieses Jahr davon überzeugen konnten in die zehn nominierten Teams aufgenommen zu werden. -->
+
+Wie im letzten Jahr wird ein inhaltlicher Hauptfokus auf künstlicher Intelligenz und Machine Learning liegen. Zu den neuen Aufgaben gehören in diesem Jahr u.a. das visuelle und auditive Erkennen von Notfallfahrzeugen sowie das Befahren einer Rampe.
+
+Am 12. und 13. Juni steht nun zunächst die Kickoff-Veranstaltung im Audi-Hauptquartier in Ingolstadt an. Dort werden die  zwei diesjährigen Modell&shy;fahrzeuge an das Team übergeben und die Entwicklungsphase kann anschließend beginnen.

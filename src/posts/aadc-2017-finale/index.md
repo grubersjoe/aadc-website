@@ -1,8 +1,8 @@
 ---
 title: 7. Platz beim AADC 2017
-date: "2018-04-30"
+date: "2017-11-21"
 ---
 
-Jemand musste Josef K. verleumdet haben, denn ohne dass er etwas Böses getan hätte, wurde er eines Morgens verhaftet. »Wie ein Hund! « sagte er, es war, als sollte die Scham ihn überleben. Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt.
+Im Finale des AADC 2016/2017 hat es für **HTWK Smart Driving** leider nur für den siebten Platz unter den verbleibenden acht Teams gereicht. Trotz einer intensiven Vorbereitungsphase und einer guten Teammoral sahen wir uns während der entscheidenden Parcoursabsolvierung einigen Schwierig&shy;keiten gegenüber gestellt, die ein besseres Abschneiden unmöglich machten.
 
-Und es war ihnen wie eine Bestätigung ihrer neuen Träume und guten Absichten, als am Ziele ihrer Fahrt die Tochter als erste sich erhob und ihren jungen Körper dehnte. »Es ist ein eigentümlicher Apparat«, sagte der Offizier zu dem Forschungsreisenden und überblickte mit einem gewissermaßen bewundernden Blick den ihm doch wohlbekannten Apparat.
+Nichtsdestotrotz blickt das Team hoffnungsvoll auf das nächste Jahr und ist optimistisch sich deutlich steigern zu können.

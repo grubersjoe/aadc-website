@@ -32,6 +32,7 @@ const BlogPostTemplate = (props) => {
         style={{
           display: 'flex',
           justifyContent: 'space-between',
+          marginTop: rhythm(1.5),
         }}
       >
         <small style={{ flex: '0 0 50%' }}>
