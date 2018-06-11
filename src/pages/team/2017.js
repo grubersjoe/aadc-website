@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import TeamNav from '../../components/TeamNav';
+import TeamInfo from '../../components/TeamInfo';
 import Avatar from '../../components/Avatar';
 import {
   avatarFabi,
@@ -20,10 +21,13 @@ const Team = props => (
     <Helmet title={`Team 2017/2018 – ${getPageTitle(props.data)}`} />
     <TeamNav />
     <h1>Team Smart Driving 2017/2018</h1>
-    <p>
-      Teamspecherin: Lina Peters &ndash;{' '}
-      <a href="mailto:lina.peters@stud.htwk-leipzig.de">lina.peters@stud.htwk-leipzig.de</a>
-    </p>
+
+    <TeamInfo
+      leader={{
+        name: 'Lina Peters',
+        email: 'lina.peters@stud.htwk-leipzig.de',
+      }}
+    />
 
     <a href={team2017} target="_blank">
       <img src={team2017} alt="Team Smart Driving 2017/2018" />
