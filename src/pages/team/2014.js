@@ -1,15 +1,54 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import TeamNav from '../../components/TeamNav';
+import TeamInfo from '../../components/TeamInfo';
+import Avatar from '../../components/Avatar';
+import {
+  avatarDenny,
+  avatarSilvio,
+  avatarAndreas,
+  avatarLars,
+  avatarEike,
+} from '../../images/avatars';
+import { team2014 } from '../../images/team';
+import { getPageTitle } from '../../utils/helper';
 
-const Team = () => (
+const Team = props => (
   <main>
-    <div>
-      <TeamNav />
-      <div>
-        <h1>Team 2014/2015</h1>
-      </div>
+    <Helmet title={`Team 2014/2015 – ${getPageTitle(props.data)}`} />
+    <TeamNav />
+    <h1>Team Smart Driving 2014/2015</h1>
+
+    <TeamInfo leader={{ name: 'Denny Hecht' }} />
+
+    <a href={team2014} target="_blank">
+      <img src={team2014} alt="Team Smart Driving 2014/2015" />
+    </a>
+
+    <h2>Kernteam</h2>
+    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <Avatar imgUrl={avatarDenny} caption="Denny Hecht" />
+      <Avatar imgUrl={avatarSilvio} caption="Silvio Feig" />
+      <Avatar imgUrl={avatarAndreas} caption="Andreas Kluge" />
+      <Avatar imgUrl={avatarLars} caption="Lars Kollmann" />
+      <Avatar imgUrl={avatarEike} caption="Eike Florian Petersen" />
     </div>
   </main>
 );
+
+Team.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
+};
+
+export const PageQuery = graphql`
+  query Team2014Query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;
 
 export default Team;

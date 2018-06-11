@@ -13,15 +13,16 @@ const TeamInfo = (props) => {
         </a> und{' '}
         <a href="https://portal.imn.htwk-leipzig.de/fakultaet/personen/m6bast" target="_blank" rel="noopener noreferrer">
           Prof. Dr. Bastian
-        </a> der Fakultät{' '}
+        </a>
+        <br />
         <a href="https://portal.imn.htwk-leipzig.de/" target="_blank" rel="noopener noreferrer">
-          Informatik, Mathematik und Naturwissenschaften
-        </a> der HTWK Leipzig.
+          Fakultät Informatik, Mathematik und Naturwissenschaften
+        </a>
       </dd>
       <dt>Teamspecherin</dt>
       <dd>
-        {`${leaderName} – `}
-        <a href={`mailto:${leaderEmail}`}>{leaderEmail}</a>
+        {leaderName}
+        {leaderEmail && (<span> – <a href={`mailto:${leaderEmail}`}>{leaderEmail}</a></span>)}
       </dd>
     </dl>
   );

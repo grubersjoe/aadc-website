@@ -60,8 +60,8 @@ const TeamNav = () => {
       <TeamLink to="/team/2016" activeStyle={activeStyle}>
         Team 2017
       </TeamLink>
-      {/* <TeamLink to="/team/2015" activeStyle={activeStyle}>Team 2016</TeamLink> */}
-      {/* <TeamLink to="/team/2014" activeStyle={activeStyle}>Team 2015</TeamLink> */}
+       <TeamLink to="/team/2015" activeStyle={activeStyle}>Team 2016</TeamLink>
+       <TeamLink to="/team/2014" activeStyle={activeStyle}>Team 2015</TeamLink>
     </Wrapper>
   );
 };
