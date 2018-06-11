@@ -14,6 +14,13 @@ module.exports = {
         name: 'src',
       },
     },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     name: 'img',
+    //     path: `${__dirname}/src/images/`,
+    //   },
+    // },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -21,16 +28,15 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 744, // page width
+              maxWidth: 648, // page width
             },
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: 'margin-bottom: 1.0725rem',
+              wrapperStyle: 'margin-bottom: 1.5rem',
             },
           },
-          // 'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
@@ -42,17 +48,23 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     // trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },,
+    {
+      // TODO: <a href="javascript:gaOptout();">Deactive Google Analytics</a>
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-120606547-1',
+        anonymize: true,
+      },
+    },
+
+    // Image processing
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+
     'gatsby-plugin-feed',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
-    'gatsby-transformer-sharp',
   ],
 };
