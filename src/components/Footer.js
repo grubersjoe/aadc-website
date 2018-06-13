@@ -26,7 +26,7 @@ const FooterLink = styled('a')`
 
 const Footer = () => (
   <Wrapper>
-    <FooterLink href="/feed.xml" title="RSS Feed">
+    <FooterLink href="/rss.xml" title="RSS Feed">
       <FontAwesomeIcon icon={faRss} style={{ marginRight: '0.25rem' }} />{' '}
       Feed
     </FooterLink>
