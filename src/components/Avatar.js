@@ -99,17 +99,17 @@ const Avatar = (props) => {
       <Image>
         <Overlay>
           {website && (
-            <a href={website} title="Website" target="_blank">
+            <a href={website} title="Website" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLink} />
             </a>
           )}
           {github && (
-            <a href={github} title="GitHub" target="_blank">
+            <a href={github} title="GitHub" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           )}
           {xing && (
-            <a href={xing} title="XING" target="_blank">
+            <a href={xing} title="XING" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faXing} />
             </a>
           )}
