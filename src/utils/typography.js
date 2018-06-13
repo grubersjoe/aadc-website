@@ -65,6 +65,9 @@ theme.overrideThemeStyles = () => ({
     marginBottom: '0.5rem',
     padding: '0.25rem 0 0 1.5rem',
   },
+  '.svg-inline--fa': {
+    maxWidth: '1rem',
+  },
 });
 
 const typography = new Typography(theme);
