@@ -40,7 +40,7 @@ const Nav = () => {
       <NavLink to="/" activeStyle={activeStyle} isActive={blogActive}>
         Neuigkeiten
       </NavLink>
-      <NavLink to="/team/2017" activeStyle={activeStyle} isActive={teamActive}>
+      <NavLink to="/team/2018" activeStyle={activeStyle} isActive={teamActive}>
         Team
       </NavLink>
       <NavLink to="/publikationen" activeStyle={activeStyle} exact>
