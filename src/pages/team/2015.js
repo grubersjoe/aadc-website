@@ -5,34 +5,34 @@ import TeamNav from '../../components/TeamNav';
 import TeamInfo from '../../components/TeamInfo';
 import Avatar from '../../components/Avatar';
 import {
-  avatarGeorg,
-  avatarPatrick,
+  avatarDenny,
   avatarSilvio,
-  avatarFabi,
-  avatarMax,
+  avatarAndreas,
+  avatarLars,
+  avatarEike,
 } from '../../images/avatars';
-import { team2015 } from '../../images/team';
+import { team2014 } from '../../images/team';
 import { getPageTitle } from '../../utils/helper';
 
 const Team = props => (
   <main>
-    <Helmet title={`Team 2015/2016 – ${getPageTitle(props.data)}`} />
+    <Helmet title={`Team 2014/2015 – ${getPageTitle(props.data)}`} />
     <TeamNav />
-    <h1>Team Smart Driving 2015/2016</h1>
+    <h1>Team Smart Driving 2014/2015</h1>
 
-    <TeamInfo leader={{ name: 'Georg Jenschmischek' }} />
+    <TeamInfo leader={{ name: 'Denny Hecht' }} />
 
-    <a href={team2015} target="_blank">
-      <img src={team2015} alt="Team Smart Driving 2015/2016" />
+    <a href={team2014} target="_blank">
+      <img src={team2014} alt="Team Smart Driving 2014/2015" />
     </a>
 
     <h2>Kernteam</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      <Avatar imgUrl={avatarGeorg} caption="Georg Jenschmischek" />
-      <Avatar imgUrl={avatarPatrick} caption="Patrick Bachmann" />
+      <Avatar imgUrl={avatarDenny} caption="Denny Hecht" />
       <Avatar imgUrl={avatarSilvio} caption="Silvio Feig" />
-      <Avatar imgUrl={avatarFabi} caption="Fabian Freihube" />
-      <Avatar imgUrl={avatarMax} caption="Max Winkler" />
+      <Avatar imgUrl={avatarAndreas} caption="Andreas Kluge" />
+      <Avatar imgUrl={avatarLars} caption="Lars Kollmann" />
+      <Avatar imgUrl={avatarEike} caption="Eike Florian Petersen" />
     </div>
   </main>
 );
@@ -42,7 +42,7 @@ Team.propTypes = {
 };
 
 export const PageQuery = graphql`
-  query Team2015Query {
+  query Team2014Query {
     site {
       siteMetadata {
         title

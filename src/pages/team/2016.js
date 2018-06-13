@@ -5,54 +5,34 @@ import TeamNav from '../../components/TeamNav';
 import TeamInfo from '../../components/TeamInfo';
 import Avatar from '../../components/Avatar';
 import {
+  avatarGeorg,
+  avatarPatrick,
+  avatarSilvio,
   avatarFabi,
-  avatarLina,
-  avatarJo,
-  avatarMicha,
-  avatarNick,
-  avatarPhilipp,
+  avatarMax,
 } from '../../images/avatars';
-import { team2016 } from '../../images/team';
+import { team2015 } from '../../images/team';
 import { getPageTitle } from '../../utils/helper';
 
 const Team = props => (
   <main>
-    <Helmet title={`Team 2016/2017 – ${getPageTitle(props.data)}`} />
+    <Helmet title={`Team 2015/2016 – ${getPageTitle(props.data)}`} />
     <TeamNav />
-    <h1>Team Smart Driving 2016/2017</h1>
+    <h1>Team Smart Driving 2015/2016</h1>
 
-    <TeamInfo
-      leader={{
-        name: 'Fabian Freihube',
-        email: 'fabian.freihube@stud.htwk-leipzig.de',
-      }}
-    />
+    <TeamInfo leader={{ name: 'Georg Jenschmischek' }} />
 
-    <a href={team2016} target="_blank">
-      <img src={team2016} alt="Team Smart Driving 2017/2018" />
+    <a href={team2015} target="_blank">
+      <img src={team2015} alt="Team Smart Driving 2015/2016" />
     </a>
 
     <h2>Kernteam</h2>
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <Avatar imgUrl={avatarGeorg} caption="Georg Jenschmischek" />
+      <Avatar imgUrl={avatarPatrick} caption="Patrick Bachmann" />
+      <Avatar imgUrl={avatarSilvio} caption="Silvio Feig" />
       <Avatar imgUrl={avatarFabi} caption="Fabian Freihube" />
-      <Avatar imgUrl={avatarNick} caption="Nick Fahrendorff" />
-      <Avatar
-        imgUrl={avatarJo}
-        caption="Jonathan Gruber"
-        profiles={{
-          website: 'https://grubersjoe.de',
-          github: 'https://github.com/grubersjoe',
-          xing: 'https://www.xing.com/profile/Jonathan_Gruber',
-        }}
-      />
-      <Avatar imgUrl={avatarMicha} caption="Michael Horn" />
-      <Avatar imgUrl={avatarLina} caption="Lina Peters" />
-    </div>
-
-    <h2>Freie Mitarbeiter</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      <Avatar imgUrl={avatarPhilipp} caption="Philipp Kleinhenz" />
-      <Avatar caption="Sonja Mauersberger" />
+      <Avatar imgUrl={avatarMax} caption="Max Winkler" />
     </div>
   </main>
 );
@@ -62,7 +42,7 @@ Team.propTypes = {
 };
 
 export const PageQuery = graphql`
-  query Team2016Query {
+  query Team2015Query {
     site {
       siteMetadata {
         title
