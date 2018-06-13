@@ -19,7 +19,7 @@ const BlogIndex = (props) => {
 
   return (
     <main>
-      <Helmet title={`Neuigkeiten – ${getPageTitle(props.data)}`} />
+      <Helmet title={`Neuigkeiten – ${getPageTitle(props.data)}`}/>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
