@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faRss } from '@fortawesome/fontawesome-free-solid';
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
 
@@ -8,7 +10,7 @@ const Wrapper = styled('footer')`
   font-size: ${fontSizes.small};
 `;
 
-const Link = styled('a')`
+const FooterLink = styled('a')`
   padding-bottom: 0.2rem;
   color: ${colors.textMuted};
   font-weight: 500;
@@ -16,13 +18,21 @@ const Link = styled('a')`
   &:hover {
     color: ${colors.secondary};
   }
+  
+  & + & {
+    margin-left: ${rhythm(0.75)};
+  }
 `;
 
 const Footer = () => (
   <Wrapper>
-    <Link href="https://www.htwk-leipzig.de/hochschule/kontakt/impressum/" target="_blank">
+    <FooterLink href="/feed.xml" title="RSS Feed">
+      <FontAwesomeIcon icon={faRss} style={{ marginRight: '0.25rem' }} />{' '}
+      Feed
+    </FooterLink>
+    <FooterLink href="https://www.htwk-leipzig.de/hochschule/kontakt/impressum/" target="_blank" rel="noopener">
       Impressum
-    </Link>
+    </FooterLink>
   </Wrapper>
 );
 
