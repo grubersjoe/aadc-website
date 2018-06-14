@@ -1,6 +1,6 @@
 # Website HTWK Smart Driving
 
-This is the [Gatsby](https://www.gatsbyjs.org/) based website of the HTWK Smart Driving team.
+This is the [Gatsby JS](https://www.gatsbyjs.org/) based website of the HTWK Smart Driving team.
 
 ## Development
 
@@ -11,10 +11,20 @@ npm install
 npm run dev
 ```
 
+Run the following command to test a production build:
+
+```
+npm run prod
+```
+
+Some features like the RSS feed (`/rss.xml`) are created in production builds only.
+
+
 ## How to write a new post
 
 Adding a post is easy!
 
+1. Start the development server as descriped in the previous section (`npm run dev`).
 1. Add a new directory for the new post under `src/posts/` and give it a meaningful name.<br>
     Note that this name is only useful for other developers and has nothing to do with the resulting URL structure.
 1. Create an `index.md` Markdown file in the directory like the following example:
@@ -29,11 +39,8 @@ Adding a post is easy!
     ![My picture](./picture_in_same_directory.jpg)
     ```
 
-1. Start the development server as descriped in the previous section (`npm run dev`).
-1. The page should show the newly created post and reflect content changes immediately.
-1. Commit your changes and merge the branch into `master` when you're happy.
-
-It is imported to **create the Markdown file first** and to start the development server afterwards, because the title and date need to be parsed once by Gatsby in the beginning. Afterwards the hot reloading works as expected.
+1. The website should show the newly created post and reflect content changes immediately. This means you can write your post in the markdown file and the page updates itself automatically.
+1. Commit your changes and merge the branch into `master` when you're happy with your post. Careful: the post will go live immediately (see Deployment).
 
 ## Production build
 

@@ -70,6 +70,7 @@
   "scripts": {
     "build": "npx gatsby build",
     "dev": "npx gatsby develop",
+    "prod": "npm run build && npx gatsby serve",
     "develop": "npx gatsby develop",
     "format": "npx prettier-eslint --write '*.js' 'src/**/*.js' 'src/**/*.md'",
     "lint": "npx eslint --ext .js,.jsx --ignore-pattern public .",
