@@ -1,6 +1,6 @@
 # Website HTWK Smart Driving
 
-This is the [Gatsby](https://www.gatsbyjs.org/) based website of the HTWK Smart Driving team.
+This is the [Gatsby JS](https://www.gatsbyjs.org/) based website of the HTWK Smart Driving team.
 
 ## Development
 
@@ -30,10 +30,10 @@ Adding a post is easy!
     ```
 
 1. Start the development server as descriped in the previous section (`npm run dev`).
-1. The page should show the newly created post and reflect content changes immediately.
-1. Commit your changes and merge the branch into `master` when you're happy.
+1. The website should show the newly created post and reflect content changes immediately. This means you can write your post in the markdown file and the page updates itself automatically.
+1. Commit your changes and merge the branch into `master` when you're happy with your post. Careful: the post will go live immediately (see Deployment)!
 
-It is imported to **create the Markdown file first** and to start the development server afterwards, because the title and date need to be parsed once by Gatsby in the beginning. Afterwards the hot reloading works as expected.
+It is imported to **create the Markdown file first** and to start the development server afterwards, because the title and date need to be parsed by Gatsby initially. Afterwards the hot reloading works as expected.
 
 ## Production build
 
