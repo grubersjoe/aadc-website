@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import color from 'color';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/fontawesome-free-solid';
-import { faGithub, faXing } from '@fortawesome/fontawesome-free-brands';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faXing } from '@fortawesome/free-brands-svg-icons';
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
 import { avatarNone } from '../images/avatars';
@@ -52,10 +52,8 @@ const Avatar = (props) => {
   const Image = styled('div')`
     width: 100%;
     height: calc(100vw - 2.5rem); // PageContainer has a padding-{left,right} of 1.25rem
-    background-image: url(${imgUrl});
+    background: url(${imgUrl}) no-repeat center ${offsetY};
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center ${offsetY};
     border-radius: 0.15rem;
 
     @media (min-width: 768px) {
@@ -89,6 +87,7 @@ const Avatar = (props) => {
     <a
       href={imgUrl}
       target="_blank"
+      rel="noreferrer noopener"
       title="Foto in voller Auflösung"
       dangerouslySetInnerHTML={{ __html: caption }}
     />
@@ -131,7 +130,7 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   imgUrl: avatarNone,
   size: 6,
-  offsetY: '10%',
+  offsetY: 0,
   profiles: {},
 };
 
