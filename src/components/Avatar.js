@@ -5,6 +5,7 @@ import color from 'color';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faXing } from '@fortawesome/free-brands-svg-icons';
+
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
 import { avatarNone } from '../images/avatars';

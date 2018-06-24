@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRss } from '@fortawesome/free-solid-svg-icons';
+
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
 

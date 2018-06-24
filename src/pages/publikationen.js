@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+
 import { rhythm } from '../utils/typography';
 import { getPageTitle, getRootPath } from '../utils/helper';
 import DownloadLink from '../components/DownloadLink';

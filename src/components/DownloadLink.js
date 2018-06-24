@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import styled from 'styled-components';
+
 import { colors } from '../utils/constants';
 
 const Icon = styled(FontAwesomeIcon)`

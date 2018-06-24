@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import color from 'color';
+
 import { rhythm } from '../utils/typography';
 import { colors } from '../utils/constants';
 import { blogActive, teamActive } from '../utils/helper';

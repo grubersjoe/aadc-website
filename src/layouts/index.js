@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
 import { rhythm } from '../utils/typography';
 import { onPostPage } from '../utils/helper';
 import Seo from '../components/Seo';
