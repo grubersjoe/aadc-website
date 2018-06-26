@@ -11,8 +11,8 @@ import { colors, fontSizes } from '../utils/constants';
 import { avatarNone } from '../images/avatars';
 
 const Avatar = (props) => {
-  const { size, imgUrl, caption, offsetY } = props;
-  const { website, github, xing } = props.profiles;
+  const { size, imgUrl, caption, offsetY, profiles } = props;
+  const { website, github, xing } = profiles;
 
   const Figure = styled('figure')`
     width: 100%;
@@ -37,7 +37,7 @@ const Avatar = (props) => {
     font-size: 150%;
 
     &:hover {
-      opacity: ${Object.keys(props.profiles).length ? 1 : 0};
+      opacity: ${Object.keys(profiles).length ? 1 : 0};
     }
 
     a {
@@ -81,19 +81,6 @@ const Avatar = (props) => {
     }
   `;
 
-  const fallbackAvatar = imgUrl.indexOf('svg') > -1;
-  const captionText = fallbackAvatar ? (
-    <span dangerouslySetInnerHTML={{ __html: caption }} />
-  ) : (
-    <a
-      href={imgUrl}
-      target="_blank"
-      rel="noreferrer noopener"
-      title="Foto in voller Auflösung"
-      dangerouslySetInnerHTML={{ __html: caption }}
-    />
-  );
-
   return (
     <Figure {...props}>
       <Image>
@@ -115,7 +102,7 @@ const Avatar = (props) => {
           )}
         </Overlay>
       </Image>
-      <Caption>{captionText}</Caption>
+      <Caption dangerouslySetInnerHTML={{ __html: caption }} />
     </Figure>
   );
 };
