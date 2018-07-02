@@ -118,7 +118,7 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   imgUrl: avatarNone,
   size: 6,
-  offsetY: 0,
+  offsetY: '0',
   profiles: {},
 };
 
