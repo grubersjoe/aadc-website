@@ -16,7 +16,13 @@ import { getPageTitle } from '../../utils/helper';
 
 const Team = props => (
   <main>
-    <Helmet title={`Team 2015/2016 – ${getPageTitle(props.data)}`} />
+    <Helmet title={`Team 2015/2016 – ${getPageTitle(props.data)}`}>
+      <meta
+        name="description"
+        content="Website des Studententeams HTWK Smart Driving aus Leipzig – Teammitglieder 2015/2016."
+      />
+    </Helmet>
+
     <TeamNav />
     <h1>Team Smart Driving 2015/2016</h1>
 

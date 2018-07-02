@@ -11,7 +11,13 @@ const Publications = (props) => {
 
   return (
     <main>
-      <Helmet title={`Publikationen – ${getPageTitle(props.data)}`} />
+      <Helmet title={`Publikationen – ${getPageTitle(props.data)}`}>
+        <meta
+          name="description"
+          content="Website des Studententeams HTWK Smart Driving aus Leipzig – Publikationen und Forschungsergebnisse zum autonomen Autofahren."
+        />
+      </Helmet>
+
       <h1>Publikationen</h1>
       <h2>Software</h2>
       <ul>
