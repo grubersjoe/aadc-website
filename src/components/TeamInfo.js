@@ -6,7 +6,7 @@ const TeamInfo = (props) => {
 
   return (
     <dl>
-      <dt>Betreuende Professoren</dt>
+      <dt style={{ fontWeight: 500 }}>Betreuende Professoren</dt>
       <dd>
         <a href="http://www.imn.htwk-leipzig.de/~schwarz/" target="_blank" rel="noopener noreferrer">
           Prof. Dr. Schwarz
@@ -19,7 +19,7 @@ const TeamInfo = (props) => {
           Fakultät Informatik, Mathematik und Naturwissenschaften
         </a>
       </dd>
-      <dt>Teamspecherin</dt>
+      <dt style={{ fontWeight: 500 }}>Teamspecherin</dt>
       <dd>
         {leaderName}
         {leaderEmail && (<span> – <a href={`mailto:${leaderEmail}`}>{leaderEmail}</a></span>)}

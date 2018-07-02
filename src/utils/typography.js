@@ -26,16 +26,15 @@ theme.overrideThemeStyles = () => ({
   '@media (max-width: 767px) { html { font-size: 16px } }': {},
 
   'h1, h2, h3': {
-    color: colors.primary,
     lineHeight: 1.3,
   },
-  'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a': {
-    color: 'inherit',
+  'h1 a, h2 a, h3 a': {
+    color: colors.primary,
+  },
+  h1: {
+    color: colors.primary,
   },
   h2: {
-    marginBottom: '1rem',
-  },
-  h4: {
     marginBottom: '0.75rem',
   },
   a: {
@@ -59,11 +58,11 @@ theme.overrideThemeStyles = () => ({
     marginBottom: '0.5rem',
   },
   dt: {
-    fontWeight: 500,
+    fontWeight: 400,
   },
   dd: {
     marginBottom: '0.5rem',
-    padding: '0.25rem 0 0 1.5rem',
+    padding: '0.25rem 0 0 1rem',
   },
 });
 
