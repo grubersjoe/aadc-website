@@ -2,7 +2,7 @@
 
 This is the [Gatsby JS](https://www.gatsbyjs.org/) based website of the HTWK Smart Driving team.
 
-![Screenshot http://smart-driving.htwk-leipzig.de](https://res.cloudinary.com/grubersjoe/image/upload/v1542626493/portfolio/smart-driving.jpg "Screenshot")
+![Screenshot http://smart-driving.htwk-leipzig.de](https://res.cloudinary.com/grubersjoe/image/upload/v1542628347/portfolio/smart-driving.jpg "Screenshot")
 
 ## Development
 
