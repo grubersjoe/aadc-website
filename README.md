@@ -2,6 +2,8 @@
 
 This is the [Gatsby JS](https://www.gatsbyjs.org/) based website of the HTWK Smart Driving team.
 
+![Screenshot http://smart-driving.htwk-leipzig.de](https://res.cloudinary.com/grubersjoe/image/upload/v1542626493/portfolio/smart-driving.jpg "Screenshot")
+
 ## Development
 
 You might want to use [yarn](https://yarnpkg.com/lang/en/) instead of npm.
@@ -35,7 +37,7 @@ Adding a post is easy!
     date: "2018-06-20"
     ---
     My **awesome** post content.
-    
+
     ![My picture](./picture_in_same_directory.jpg)
     ```
 
@@ -50,6 +52,6 @@ npm run build
 
 ## Deployment
 
-Every time a branch is merged into `master` (or commits are pushed to `master`) a GitLab pipeline is started, which builds the Gatsby project and deploys the build articafts to the website document root `/var/www/html` afterwards. 
+Every time a branch is merged into `master` (or commits are pushed to `master`) a GitLab pipeline is started, which builds the Gatsby project and deploys the build articafts to the website document root `/var/www/html` afterwards.
 
 **So the page goes live immediately!**
