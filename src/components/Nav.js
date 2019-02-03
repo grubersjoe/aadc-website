@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import color from 'color';
 
 import { colors } from '../utils/constants';
 import { blogActive, teamActive } from '../utils/helper';
+import { rhythm } from '../utils/typography';
 
 const Nav = () => {
-  const Wrapper = styled('nav')`
-    margin-bottom: 3rem;
+  const Wrapper = styled.nav`
+    margin-bottom: ${rhythm(1.75)};
   `;
 
   const NavLink = styled(Link)`
@@ -18,7 +18,7 @@ const Nav = () => {
     color: ${colors.text};
 
     &:hover {
-      border-bottom: 2px solid ${color(colors.primary).fade(0.2).string()};
+      color: ${colors.primary};
     }
 
     & + & {

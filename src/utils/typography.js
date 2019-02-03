@@ -31,9 +31,6 @@ theme.overrideThemeStyles = () => ({
   'h1 a, h2 a, h3 a': {
     color: colors.primary,
   },
-  h1: {
-    color: colors.primary,
-  },
   h2: {
     marginBottom: '0.75rem',
     fontWeight: 500,
@@ -43,14 +40,11 @@ theme.overrideThemeStyles = () => ({
     textDecoration: 'none',
     transition: '0.25s background-color ease-in-out',
   },
-  'p a:hover, li a:hover, dt a:hover, dd a:hover': {
+  'article a:hover, main a:hover': {
     backgroundColor: color(colors.secondary).fade(0.94).string(),
   },
   small: {
     fontSize: '90%',
-  },
-  strong: {
-    fontWeight: 500,
   },
   hr: {
     height: '2px',
