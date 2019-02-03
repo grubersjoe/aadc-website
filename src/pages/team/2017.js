@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+
+import ImageGrid from '../../components/ImageGrid';
 import TeamNav from '../../components/TeamNav';
 import TeamInfo from '../../components/TeamInfo';
+
 import Avatar from '../../components/Avatar';
 import {
   avatarFabi,
@@ -13,6 +16,7 @@ import {
   avatarPhilipp,
 } from '../../images/avatars';
 import { team2016 } from '../../images/team';
+
 import { getPageTitle } from '../../utils/helper';
 
 const Team = props => (
@@ -39,7 +43,7 @@ const Team = props => (
     </a>
 
     <h2>Kernteam</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <ImageGrid>
       <Avatar imgUrl={avatarFabi} caption="Fabian Freihube" />
       <Avatar imgUrl={avatarNick} caption="Nick Fahrendorff" />
       <Avatar
@@ -53,13 +57,13 @@ const Team = props => (
       />
       <Avatar imgUrl={avatarMicha} caption="Michael Horn" />
       <Avatar imgUrl={avatarLina} caption="Lina Peters" />
-    </div>
+    </ImageGrid>
 
     <h2>Freie Mitarbeiter</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <ImageGrid>
       <Avatar imgUrl={avatarPhilipp} caption="Philipp Kleinhenz" />
       <Avatar caption="Sonja Mauersberger" />
-    </div>
+    </ImageGrid>
   </main>
 );
 

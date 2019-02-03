@@ -6,22 +6,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faXing } from '@fortawesome/free-brands-svg-icons';
 
-import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
 import { avatarNone } from '../images/avatars';
 
 const Avatar = (props) => {
-  const { size, imgUrl, caption, offsetY, profiles } = props;
+  const { imgUrl, caption, offsetY, profiles } = props;
   const { website, github, xing } = profiles;
 
   const Figure = styled('figure')`
     width: 100%;
-    margin-bottom: ${rhythm(1)};
-
-    @media (min-width: 768px) {
-      width: ${rhythm(size)}
-      margin-right: ${rhythm(1.125)};
-    }
+    margin-bottom: 0;
   `;
 
   const Overlay = styled('div')`
@@ -52,13 +46,13 @@ const Avatar = (props) => {
 
   const Image = styled('div')`
     width: 100%;
-    height: calc(100vw - 2.5rem); // PageContainer has a padding-{left,right} of 1.25rem
+    height: calc((100vw - 1.25rem - 2.5rem) / 2 * 5/4); /* 1.25rem grid-gap and 2.5rem page container padding */
     background: url(${imgUrl}) no-repeat center ${offsetY};
     background-size: cover;
     border-radius: 0.15rem;
 
     @media (min-width: 768px) {
-      height: ${rhythm(size * (5 / 4))};
+      height: calc((648px - 3rem) / 3 * 5/4); /* 3rem grid-gap */
     }
   `;
 
@@ -110,14 +104,12 @@ const Avatar = (props) => {
 Avatar.propTypes = {
   imgUrl: PropTypes.string,
   caption: PropTypes.string.isRequired,
-  size: PropTypes.number,
   offsetY: PropTypes.string,
   profiles: PropTypes.objectOf(PropTypes.string),
 };
 
 Avatar.defaultProps = {
   imgUrl: avatarNone,
-  size: 6,
   offsetY: '0',
   profiles: {},
 };

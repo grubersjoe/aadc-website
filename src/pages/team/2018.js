@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+
+import ImageGrid from '../../components/ImageGrid';
 import TeamNav from '../../components/TeamNav';
 import TeamInfo from '../../components/TeamInfo';
+
 import Avatar from '../../components/Avatar';
 import {
   avatarFabi,
@@ -40,16 +43,16 @@ const Team = props => (
     </a>
 
     <h2>Kernteam</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <ImageGrid>
       <Avatar imgUrl={avatarLina} caption="Lina Peters" />
       <Avatar imgUrl={avatarLeo} caption="Leo Binder" />
       <Avatar imgUrl={avatarNick} caption="Nick Fahrendorff" />
       <Avatar imgUrl={avatarFabi} caption="Fabian Freihube" />
       <Avatar imgUrl={avatarPhilipp} caption="Philipp Kleinhenz" />
-    </div>
+    </ImageGrid>
 
     <h2>Freie Mitarbeiter</h2>
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <ImageGrid>
       <Avatar imgUrl={avatarFranz} caption="Franz Anders" />
       <Avatar
         imgUrl={avatarJo}
@@ -61,7 +64,7 @@ const Team = props => (
         }}
       />
       <Avatar caption="Fabian Sauer" />
-    </div>
+    </ImageGrid>
   </main>
 );
 
