@@ -7,6 +7,7 @@ import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
 
 const Wrapper = styled('footer')`
+  margin-top: 2rem;
   color: ${colors.textMuted};
   font-size: ${fontSizes.small};
 `;
@@ -19,9 +20,9 @@ const FooterLink = styled('a')`
   &:hover {
     color: ${colors.secondary};
   }
-  
+
   & + & {
-    margin-left: ${rhythm(0.75)};
+    margin-left: ${rhythm(1)};
   }
 `;
 

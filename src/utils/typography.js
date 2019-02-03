@@ -16,7 +16,7 @@ const theme = {
   blockMarginBottom: 0.85,
   headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
   headerWeight: 600,
-  scaleRatio: 1.618,
+  scaleRatio: 1.5,
 };
 
 theme.overrideThemeStyles = () => ({
@@ -36,6 +36,7 @@ theme.overrideThemeStyles = () => ({
   },
   h2: {
     marginBottom: '0.75rem',
+    fontWeight: 500,
   },
   a: {
     color: colors.secondary,
@@ -55,14 +56,20 @@ theme.overrideThemeStyles = () => ({
     height: '2px',
   },
   li: {
-    marginBottom: '0.5rem',
+    marginBottom: '0.25rem',
+  },
+  'dl, ul': {
+    marginBottom: '1.5rem',
   },
   dt: {
     fontWeight: 400,
   },
   dd: {
-    marginBottom: '0.5rem',
+    marginBottom: '0.75rem',
     padding: '0.25rem 0 0 1rem',
+  },
+  section: {
+    marginBottom: '1.5rem',
   },
 });
 

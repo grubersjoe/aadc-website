@@ -51,7 +51,7 @@ const BlogPostTemplate = (props) => {
           display: 'block',
           marginBottom: rhythm(0.75),
           marginTop: rhythm(-0.5),
-          fontWeight: 600,
+          fontWeight: 500,
         }}
       >
         {post.frontmatter.date}

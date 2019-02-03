@@ -11,7 +11,7 @@ const TeamNav = () => {
     position: relative;
     display: inline-flex;
     flex-wrap: nowrap;
-    margin-bottom: ${rhythm(1.25)}
+    margin-bottom: ${rhythm(1.5)}
     overflow-x: auto;
 
     /**

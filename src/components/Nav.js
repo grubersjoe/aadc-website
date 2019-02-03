@@ -3,13 +3,12 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import color from 'color';
 
-import { rhythm } from '../utils/typography';
 import { colors } from '../utils/constants';
 import { blogActive, teamActive } from '../utils/helper';
 
 const Nav = () => {
   const Wrapper = styled('nav')`
-    margin-bottom: ${rhythm(1.75)};
+    margin-bottom: 3rem;
   `;
 
   const NavLink = styled(Link)`
@@ -18,16 +17,12 @@ const Nav = () => {
     transition: all 0.25s ease-in-out;
     color: ${colors.text};
 
-    @media (min-width: 360px) {
-      font-size: 115%;
-    }
-
     &:hover {
       border-bottom: 2px solid ${color(colors.primary).fade(0.2).string()};
     }
 
     & + & {
-      margin-left: ${rhythm(1)};
+      margin-left: 2rem;
     }
   `;
 

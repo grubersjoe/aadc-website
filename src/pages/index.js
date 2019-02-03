@@ -12,7 +12,7 @@ const BlogIndex = (props) => {
 
   const Date = styled('small')`
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: ${rhythm(0.25)};
     margin-bottom: ${rhythm(0.25)};
   `;

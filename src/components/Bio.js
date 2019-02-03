@@ -10,8 +10,8 @@ const Bio = (props) => {
   const { footer } = props;
 
   const Wrapper = styled('article')`
-    margin-top: ${footer ? rhythm(1.75) : 0};
-    margin-bottom: ${footer ? rhythm(1) : rhythm(1.75)};
+    margin-top: ${footer ? rhythm(2.25) : 0};
+    margin-bottom: ${footer ? rhythm(1) : rhythm(2.25)};
 
     @media (min-width: 768px) {
       display: flex;
