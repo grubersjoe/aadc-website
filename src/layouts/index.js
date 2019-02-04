@@ -2,19 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { containerWidth } from '../utils/constants';
 import { rhythm } from '../utils/typography';
 import { onPostPage } from '../utils/helper';
+
 import Seo from '../components/Seo';
 import Nav from '../components/Nav';
 import Bio from '../components/Bio';
 import Footer from '../components/Footer';
 
-const Template = props => {
+const Template = (props) => {
   const { children, location } = props;
 
   const PageContainer = styled('div')`
     margin: 0 auto;
-    max-width: ${rhythm(24)};
+    max-width: ${containerWidth}px;
     padding: ${rhythm(1.5)} 1.25rem;
 
     @media (min-width: 768px) {

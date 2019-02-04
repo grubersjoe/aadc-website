@@ -1,5 +1,7 @@
 import color from 'color';
 
+const containerWidth = 620; // px
+
 const colors = {
   primary: 'hsl(212, 100%, 22%)',
   secondary: 'hsl(210, 64%, 37%)',
@@ -8,8 +10,8 @@ const colors = {
 };
 
 const fontSizes = {
-  large: '110%',
+  large: '112%',
   small: '90%',
 };
 
-export { colors, fontSizes };
+export { containerWidth, colors, fontSizes };

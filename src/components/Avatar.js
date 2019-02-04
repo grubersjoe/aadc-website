@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faXing } from '@fortawesome/free-brands-svg-icons';
 
-import { colors, fontSizes } from '../utils/constants';
+import { containerWidth, colors, fontSizes } from '../utils/constants';
 import { avatarNone } from '../images/avatars';
 
 const Avatar = (props) => {
@@ -52,7 +52,7 @@ const Avatar = (props) => {
     border-radius: 0.15rem;
 
     @media (min-width: 768px) {
-      height: calc((648px - 3rem) / 3 * 5/4); /* 3rem grid-gap */
+      height: calc((${containerWidth}px - 3rem) / 3 * 5/4); /* 3rem grid-gap */
     }
   `;
 

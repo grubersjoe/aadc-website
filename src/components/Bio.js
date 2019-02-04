@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { fontSizes } from '../utils/constants';
 import { rhythm } from '../utils/typography';
 
 const Bio = (props) => {
@@ -10,9 +11,11 @@ const Bio = (props) => {
   const StyledBio = styled('article')`
     margin-top: ${footer ? rhythm(1.75) : 0};
     margin-bottom: ${footer ? rhythm(1) : rhythm(1.75)};
+    font-size: 106%;
+    hyphens: auto;
 
     @media (min-width: 768px) {
-      font-size: 110%;
+      font-size: ${fontSizes.large};
     }
   `;
 
@@ -21,10 +24,10 @@ const Bio = (props) => {
       Wir sind das Team <strong>HTWK Smart Driving</strong> der{' '}
       <a href="https://www.htwk-leipzig.de" target="_blank" rel="noopener noreferrer">
         Hochschule für Technik, Wirtschaft und Kultur Leipzig
-      </a>
+      </a>.
       {' '}
       Als studentische Forschungs&shy;gruppe be&shy;schäftigen wir uns mit Technologien rund um das
-      autonome Autofahren. Seit 2014 nehmen wir am{' '}
+      autonome Auto&shy;fahren. Seit 2014 nehmen wir am{' '}
       <a href="https://www.audi-autonomous-driving-cup.com" target="_blank" rel="noopener noreferrer">
         Audi Autonomous Driving Cup
       </a>{' '}
