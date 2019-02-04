@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import { rhythm } from '../utils/typography';
 import { getPageTitle } from '../utils/helper';
+
+import Layout from '../components/Layout';
 
 const BlogIndex = (props) => {
   const posts = props.data.allMarkdownRemark.edges;
@@ -18,7 +20,7 @@ const BlogIndex = (props) => {
   `;
 
   return (
-    <main>
+    <Layout location={props.location}>
       <Helmet title={`Neuigkeiten – ${getPageTitle(props.data)}`} />
 
       {posts.map(({ node }) => {
@@ -33,7 +35,7 @@ const BlogIndex = (props) => {
           </article>
         );
       })}
-    </main>
+    </Layout>
   );
 };
 

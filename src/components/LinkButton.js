@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import styled, { css } from 'styled-components';
 import color from 'color';
 
-import Link from 'gatsby-link';
 import { colors, fontSizes } from '../utils/constants';
 
 // TODO: extract common btn styles

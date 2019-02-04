@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
+import Layout from '../../components/Layout';
 import ImageGrid from '../../components/ImageGrid';
 import TeamNav from '../../components/TeamNav';
 import TeamInfo from '../../components/TeamInfo';
@@ -20,7 +22,7 @@ import { team2016 } from '../../images/team';
 import { getPageTitle } from '../../utils/helper';
 
 const Team = props => (
-  <main>
+  <Layout location={props.location}>
     <Helmet title={`Team 2016/2017 – ${getPageTitle(props.data)}`}>
       <meta
         name="description"
@@ -64,7 +66,7 @@ const Team = props => (
       <Avatar imgUrl={avatarPhilipp} caption="Philipp Kleinhenz" />
       <Avatar caption="Sonja Mauersberger" />
     </ImageGrid>
-  </main>
+  </Layout>
 );
 
 Team.propTypes = {

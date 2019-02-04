@@ -1,16 +1,19 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
 import { getPageTitle } from '../utils/helper';
 
+import Layout from '../components/Layout';
+
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
-  const { previous, next } = props.pathContext;
+  const { previous, next } = props.pageContext;
 
   const Date = styled.small`
     display: block;
@@ -50,7 +53,7 @@ const BlogPostTemplate = (props) => {
   `;
 
   return (
-    <div>
+    <Layout location={props.location}>
       <Helmet title={`${post.frontmatter.title} – ${getPageTitle(props.data)}`} />
       <h1>{post.frontmatter.title}</h1>
       <Date>
@@ -75,7 +78,7 @@ const BlogPostTemplate = (props) => {
           )}
         </LinkWrapper>
       </PostNav>
-    </div>
+    </Layout>
   );
 };
 

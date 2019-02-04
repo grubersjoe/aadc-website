@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import color from 'color';
 
@@ -11,7 +11,7 @@ const TeamNav = () => {
     position: relative;
     display: inline-flex;
     flex-wrap: nowrap;
-    margin-bottom: ${rhythm(1.5)}
+    margin-bottom: ${rhythm(1.5)};
     overflow-x: auto;
 
     /**

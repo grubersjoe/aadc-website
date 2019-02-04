@@ -6,12 +6,12 @@ import { containerWidth } from '../utils/constants';
 import { rhythm } from '../utils/typography';
 import { onPostPage } from '../utils/helper';
 
-import Seo from '../components/Seo';
-import Nav from '../components/Nav';
-import Bio from '../components/Bio';
-import Footer from '../components/Footer';
+import Seo from './Seo';
+import Nav from './Nav';
+import Bio from './Bio';
+import Footer from './Footer';
 
-const Template = (props) => {
+const Layout = (props) => {
   const { children, location } = props;
 
   const PageContainer = styled('div')`
@@ -29,17 +29,23 @@ const Template = (props) => {
     <PageContainer>
       <Seo />
       <Nav />
+
       {!onPostPage(location) && <Bio />}
-      {children()}
+
+      <main>
+        {children}
+      </main>
+
       {onPostPage(location) && <Bio footer />}
+
       <Footer />
     </PageContainer>
   );
 };
 
-Template.propTypes = {
-  children: PropTypes.func.isRequired,
-  location: PropTypes.objectOf(PropTypes.string).isRequired,
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
-export default Template;
+export default Layout;

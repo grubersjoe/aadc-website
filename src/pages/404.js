@@ -1,12 +1,14 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-const NotFoundPage = () => (
-  <main>
+import Layout from '../components/Layout';
+
+const NotFoundPage = (props) => (
+  <Layout location={props.location}>
     <Helmet title="#404" />
     <h1>404</h1>
     <p>Diese Seite existiert nicht.</p>
-  </main>
+  </Layout>
 );
 
 export default NotFoundPage;

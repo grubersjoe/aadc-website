@@ -68,10 +68,11 @@ theme.overrideThemeStyles = () => ({
 });
 
 const typography = new Typography(theme);
+const { rhythm, scale } = typography;
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
   typography.injectStyles();
 }
 
-export default typography;
+export { typography as default, rhythm, scale };

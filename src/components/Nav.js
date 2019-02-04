@@ -1,17 +1,14 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import { colors } from '../utils/constants';
-import { blogActive, teamActive } from '../utils/helper';
 import { rhythm } from '../utils/typography';
 
-const Nav = () => {
-  const Wrapper = styled.nav`
-    margin-bottom: ${rhythm(1.75)};
-  `;
+const Wrapper = styled.nav`
+  margin-bottom: ${rhythm(1.75)};
 
-  const NavLink = styled(Link)`
+  a {
     padding-bottom: 0.2rem;
     border-bottom: 2px solid transparent;
     transition: all 0.25s ease-in-out;
@@ -21,27 +18,34 @@ const Nav = () => {
       color: ${colors.primary};
     }
 
-    & + & {
-      margin-left: 2rem;
-    }
-  `;
 
-  const activeStyle = {
-    color: colors.primary,
-    borderBottom: `2px solid ${colors.primary}`,
+    &.active {
+      color: ${colors.primary};
+      border-bottom: 2px solid ${colors.primary};
+    }
+  }
+
+  a + a {
+    margin-left: 2rem;
+  }
+`;
+
+const Nav = () => {
+  const isPartiallyActive = ({ isPartiallyCurrent }) => {
+    return isPartiallyCurrent ? { className: 'active' } : null;
   };
 
   return (
     <Wrapper>
-      <NavLink to="/" activeStyle={activeStyle} isActive={blogActive}>
+      <Link to="/" activeClassName="active">
         Neuigkeiten
-      </NavLink>
-      <NavLink to="/team/2018" activeStyle={activeStyle} isActive={teamActive}>
+      </Link>
+      <Link to="/team/2018" getProps={isPartiallyActive}>
         Team
-      </NavLink>
-      <NavLink to="/publikationen" activeStyle={activeStyle} exact>
+      </Link>
+      <Link to="/publikationen" getProps={isPartiallyActive}>
         Publikationen
-      </NavLink>
+      </Link>
     </Wrapper>
   );
 };

@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
 import { rhythm } from '../utils/typography';
 import { getPageTitle, getRootPath } from '../utils/helper';
+
 import DownloadLink from '../components/DownloadLink';
+import Layout from '../components/Layout';
 
 const Publications = (props) => {
   const rootPath = getRootPath();
 
   return (
-    <main>
+    <Layout location={props.location}>
       <Helmet title={`Publikationen – ${getPageTitle(props.data)}`}>
         <meta
           name="description"
@@ -63,7 +66,7 @@ const Publications = (props) => {
           </dd>
         </dl>
       </section>
-    </main>
+    </Layout>
   );
 };
 
@@ -82,4 +85,3 @@ export const PageQuery = graphql`
     }
   }
 `;
-
