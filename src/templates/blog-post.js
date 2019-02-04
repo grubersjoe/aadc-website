@@ -12,6 +12,13 @@ const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
   const { previous, next } = props.pathContext;
 
+  const Date = styled.small`
+    display: block;
+    margin-bottom: ${rhythm(0.75)};
+    margin-top: ${rhythm(-0.5)};
+    font-weight: 500;
+  `;
+
   const PostNav = styled('div')`
     display: flex;
     justify-content: space-between;
@@ -46,17 +53,10 @@ const BlogPostTemplate = (props) => {
     <div>
       <Helmet title={`${post.frontmatter.title} – ${getPageTitle(props.data)}`} />
       <h1>{post.frontmatter.title}</h1>
-      <small
-        style={{
-          display: 'block',
-          marginBottom: rhythm(0.75),
-          marginTop: rhythm(-0.5),
-          fontWeight: 500,
-        }}
-      >
+      <Date>
         {post.frontmatter.date}
-      </small>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </Date>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} style={{ hyphens: 'auto' }} />
       <PostNav>
         <LinkWrapper>
           {next && (
