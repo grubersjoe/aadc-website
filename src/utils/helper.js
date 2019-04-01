@@ -15,10 +15,10 @@ export function onPostPage(location) {
   return postUrlRegex.test(location.pathname);
 }
 
-export function blogActive(match, location) {
+export function onBlogPage(match, location) {
   return location.pathname === getRootPath() || onPostPage(location);
 }
 
-export function teamActive(match, location) {
-  return location.pathname.indexOf('team') >= 0;
+export function onTeamPage(location) {
+  return location.pathname.includes('team');
 }

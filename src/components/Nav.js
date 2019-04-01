@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 import { colors } from '../utils/constants';
+import { onPostPage } from '../utils/helper';
 import { rhythm } from '../utils/typography';
 
 const Wrapper = styled.nav`
@@ -31,19 +32,19 @@ const Wrapper = styled.nav`
 `;
 
 const Nav = () => {
-  const isPartiallyActive = ({ isPartiallyCurrent }) => {
-    return isPartiallyCurrent ? { className: 'active' } : null;
+  const isPartiallyActive = ({ location }) => {
+    return location.pathname === '/' || onPostPage(location) ? { className: 'active' } : {};
   };
 
   return (
     <Wrapper>
-      <Link to="/" activeClassName="active">
+      <Link to="/" getProps={isPartiallyActive}>
         Neuigkeiten
       </Link>
-      <Link to="/team/2018" getProps={isPartiallyActive}>
+      <Link to="/team" activeClassName="active" partiallyActive={true}>
         Team
       </Link>
-      <Link to="/publikationen" getProps={isPartiallyActive}>
+      <Link to="/publikationen" activeClassName="active" partiallyActive={true}>
         Publikationen
       </Link>
     </Wrapper>

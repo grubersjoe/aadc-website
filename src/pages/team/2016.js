@@ -20,7 +20,7 @@ import { team2015 } from '../../images/team';
 
 import { getPageTitle } from '../../utils/helper';
 
-const Team = props => (
+const Team2016 = props => (
   <Layout location={props.location}>
     <Helmet title={`Team 2015/2016 – ${getPageTitle(props.data)}`}>
       <meta
@@ -34,7 +34,7 @@ const Team = props => (
 
     <TeamInfo leader={{ name: 'Georg Jenschmischek' }} />
 
-    <a href={team2015} target="_blank">
+    <a href={team2015} target="_blank" rel="noopener noreferrer">
       <img src={team2015} alt="Team Smart Driving 2015/2016" />
     </a>
 
@@ -49,12 +49,12 @@ const Team = props => (
   </Layout>
 );
 
-Team.propTypes = {
+Team2016.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export const PageQuery = graphql`
-  query Team2015Query {
+  query {
     site {
       siteMetadata {
         title
@@ -63,4 +63,4 @@ export const PageQuery = graphql`
   }
 `;
 
-export default Team;
+export default Team2016;

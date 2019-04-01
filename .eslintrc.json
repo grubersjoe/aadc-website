@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "__PREFIX_PATHS__": false,
+    "__PATH_PREFIX__": false
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "react/prop-types": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
