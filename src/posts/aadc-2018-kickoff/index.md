@@ -1,6 +1,6 @@
 ---
 title: AADC 2018 – Kick-Off in Ingolstadt
-date: "2018-06-15"
+date: '2018-06-15'
 ---
 
 Diese Woche ging es für das Team und die Betreuerin des Teams Prof. Schwarz zum Kick-Off nach Ingolstadt. Neben allgemeinen Informationen und der Vorstellung der diesjährigen Fahraufgaben, bekamen wir eine Führung durch die eindrucksvolle und hoch-automatisierte Fabrik.

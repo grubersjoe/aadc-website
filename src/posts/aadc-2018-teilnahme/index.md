@@ -1,6 +1,6 @@
 ---
 title: Erfolgreiche Nominierung für den AADC 2018
-date: "2018-05-24"
+date: '2018-05-24'
 ---
 
 Wir freuen uns mitteilen zu können, dass wir uns auch in diesem Jahr erfolgreich für den Audi Autonomus Driving Cup qualifizieren konnten. Dies ist für unser Team bereits die vierte Nominierung in Folge. Beim diesjährigen Wettbewerb gibt es einige interessante Neuerungen:

@@ -14,11 +14,7 @@ const Grid = styled.div`
   }
 `;
 
-const ImageGrid = props => (
-  <Grid {...props}>
-    {props.children}
-  </Grid>
-);
+const ImageGrid = props => <Grid {...props}>{props.children}</Grid>;
 
 ImageGrid.propTypes = {
   children: PropTypes.node.isRequired,

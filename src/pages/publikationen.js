@@ -9,7 +9,7 @@ import { getPageTitle, getRootPath } from '../utils/helper';
 import DownloadLink from '../components/DownloadLink';
 import Layout from '../components/Layout';
 
-const Publications = (props) => {
+const Publications = props => {
   const rootPath = getRootPath();
 
   return (
@@ -39,7 +39,6 @@ const Publications = (props) => {
           </li>
         </ul>
       </section>
-
 
       <section>
         <header>

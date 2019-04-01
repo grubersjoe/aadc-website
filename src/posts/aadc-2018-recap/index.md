@@ -1,6 +1,6 @@
 ---
 title: AADC 2018 – Recap
-date: "2018-10-19"
+date: '2018-10-19'
 ---
 
 Nach 3 Monaten harter Arbeit ist der Audi Autonomous Driving Cup 2018 nach dem Testevent für unser Team schon wieder vorbei. Es folgt eine kleine Zusammenfassung unserer Erfahrungen beim diesjährigen AADC.

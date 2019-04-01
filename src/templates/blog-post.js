@@ -11,7 +11,7 @@ import { getPageTitle } from '../utils/helper';
 
 import Layout from '../components/Layout';
 
-const BlogPostTemplate = (props) => {
+const BlogPostTemplate = props => {
   const post = props.data.markdownRemark;
   const { previous, next } = props.pageContext;
 
@@ -56,9 +56,7 @@ const BlogPostTemplate = (props) => {
     <Layout location={props.location}>
       <Helmet title={`${post.frontmatter.title} – ${getPageTitle(props.data)}`} />
       <h1>{post.frontmatter.title}</h1>
-      <Date>
-        {post.frontmatter.date}
-      </Date>
+      <Date>{post.frontmatter.date}</Date>
       <div dangerouslySetInnerHTML={{ __html: post.html }} style={{ hyphens: 'auto' }} />
       <PostNav>
         <LinkWrapper>

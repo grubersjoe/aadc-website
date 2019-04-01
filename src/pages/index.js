@@ -9,7 +9,7 @@ import { getPageTitle } from '../utils/helper';
 
 import Layout from '../components/Layout';
 
-const BlogIndex = (props) => {
+const BlogIndex = props => {
   const posts = props.data.allMarkdownRemark.edges;
 
   const Date = styled('small')`

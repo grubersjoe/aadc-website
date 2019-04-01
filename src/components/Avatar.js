@@ -9,7 +9,7 @@ import { faGithub, faXing } from '@fortawesome/free-brands-svg-icons';
 import { containerWidth, colors, fontSizes } from '../utils/constants';
 import { avatarNone } from '../images/avatars';
 
-const Avatar = (props) => {
+const Avatar = props => {
   const { imgUrl, caption, offsetY, profiles } = props;
   const { website, github, xing } = profiles;
 
@@ -24,7 +24,9 @@ const Avatar = (props) => {
     justify-content: center;
     height: 100%;
     padding: 1rem;
-    background-color: ${color(colors.primary).alpha(0.7).string()};
+    background-color: ${color(colors.primary)
+      .alpha(0.7)
+      .string()};
     border-radius: 0.15rem;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
@@ -39,20 +41,24 @@ const Avatar = (props) => {
       color: white;
 
       &:hover {
-        color: ${color('white').alpha(0.75).string()}
+        color: ${color('white')
+          .alpha(0.75)
+          .string()};
       }
     }
   `;
 
   const Image = styled('div')`
     width: 100%;
-    height: calc((100vw - 1.25rem - 2.5rem) / 2 * 5/4); /* 1.25rem grid-gap and 2.5rem page container padding */
+    height: calc(
+      (100vw - 1.25rem - 2.5rem) / 2 * 5 / 4
+    ); /* 1.25rem grid-gap and 2.5rem page container padding */
     background: url(${imgUrl}) no-repeat center ${offsetY};
     background-size: cover;
     border-radius: 0.15rem;
 
     @media (min-width: 768px) {
-      height: calc((${containerWidth}px - 3rem) / 3 * 5/4); /* 3rem grid-gap */
+      height: calc((${containerWidth}px - 3rem) / 3 * 5 / 4); /* 3rem grid-gap */
     }
   `;
 

@@ -24,7 +24,10 @@ const StyledTeamNav = styled.nav`
     bottom: 0;
     content: '';
     width: 100%;
-    border-bottom: 2px solid ${color(colors.text).fade(0.9).string()};
+    border-bottom: 2px solid
+      ${color(colors.text)
+        .fade(0.9)
+        .string()};
   }
 
   a {
@@ -36,7 +39,9 @@ const StyledTeamNav = styled.nav`
     text-align: center;
 
     &:hover {
-      border-bottom-color: ${color(colors.text).fade(0.7).string()};
+      border-bottom-color: ${color(colors.text)
+        .fade(0.7)
+        .string()};
     }
 
     &:first-of-type {
@@ -67,8 +72,12 @@ const TeamNav = () => {
       <Link to="/team/2017" activeClassName="active">
         Team 2017
       </Link>
-      <Link to="/team/2016" activeClassName="active">Team 2016</Link>
-      <Link to="/team/2015" activeClassName="active">Team 2015</Link>
+      <Link to="/team/2016" activeClassName="active">
+        Team 2016
+      </Link>
+      <Link to="/team/2015" activeClassName="active">
+        Team 2015
+      </Link>
     </StyledTeamNav>
   );
 };

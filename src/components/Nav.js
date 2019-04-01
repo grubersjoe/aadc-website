@@ -19,7 +19,6 @@ const Wrapper = styled.nav`
       color: ${colors.primary};
     }
 
-
     &.active {
       color: ${colors.primary};
       border-bottom: 2px solid ${colors.primary};

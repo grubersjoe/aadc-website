@@ -3,10 +3,7 @@ import React from 'react';
 
 import Team2018 from './team/2018';
 
-const TeamPage = (props) => (
-  <Team2018 {...props} />
-);
-
+const TeamPage = props => <Team2018 {...props} />;
 
 export const PageQuery = graphql`
   query {

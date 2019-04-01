@@ -11,7 +11,7 @@ import Nav from './Nav';
 import Bio from './Bio';
 import Footer from './Footer';
 
-const Layout = (props) => {
+const Layout = props => {
   const { children, location } = props;
 
   const PageContainer = styled('div')`
@@ -32,9 +32,7 @@ const Layout = (props) => {
 
       {!onPostPage(location) && <Bio />}
 
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
 
       {onPostPage(location) && <Bio footer />}
 

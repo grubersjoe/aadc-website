@@ -24,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-      `).then((result) => {
+      `).then(result => {
         if (result.errors) {
           // eslint-disable-next-line no-console
           console.log(result.errors);
