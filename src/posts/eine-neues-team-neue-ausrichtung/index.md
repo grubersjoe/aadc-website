@@ -1,6 +1,6 @@
 ---
 title: Neues Team - Neue Ziele
-date: '2019-5-2'
+date: '2019-05-02'
 ---
 
 Seit seiner Gründung vor sechs Jahren bestand das HTWK Smart Driving Team meist aus nur wenigen Studierenden und widmete sich vordergründig der Teilname an dem von Audi veranstalteten [AADC](https://www.audi-autonomous-driving-cup.com).
