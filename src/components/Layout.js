@@ -34,7 +34,7 @@ const Layout = props => {
 
       <main>{children}</main>
 
-      {onPostPage(location) && <Bio footer />}
+      {onPostPage(location) && <Bio isFooter />}
 
       <Footer />
     </PageContainer>

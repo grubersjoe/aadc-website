@@ -4,14 +4,14 @@ import styled from 'styled-components';
 import color from 'color';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faXing } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { containerWidth, colors, fontSizes } from '../utils/constants';
 import { avatarNone } from '../images/avatars';
 
 const Avatar = props => {
   const { imgUrl, caption, offsetY, profiles } = props;
-  const { website, github, xing } = profiles;
+  const { website, github } = profiles;
 
   const Figure = styled('figure')`
     width: 100%;
@@ -71,14 +71,6 @@ const Avatar = props => {
     @media (min-width: 768px) {
       font-size: ${fontSizes.small};
     }
-
-    a {
-      color: ${colors.text};
-    }
-
-    a:hover {
-      color: ${colors.secondary};
-    }
   `;
 
   return (
@@ -93,11 +85,6 @@ const Avatar = props => {
           {github && (
             <a href={github} title="GitHub" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} />
-            </a>
-          )}
-          {xing && (
-            <a href={xing} title="XING" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faXing} />
             </a>
           )}
         </Overlay>

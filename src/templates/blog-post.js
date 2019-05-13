@@ -40,7 +40,7 @@ const BlogPostTemplate = props => {
   `;
 
   const LinkIcon = styled(FontAwesomeIcon)`
-    color: ${colors.secondary};
+    color: ${colors.primary};
     height: 100%;
   `;
 
@@ -55,9 +55,12 @@ const BlogPostTemplate = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={`${post.frontmatter.title} – ${getPageTitle(props.data)}`} />
+
       <h1>{post.frontmatter.title}</h1>
       <Date>{post.frontmatter.date}</Date>
+
       <div dangerouslySetInnerHTML={{ __html: post.html }} style={{ hyphens: 'auto' }} />
+
       <PostNav>
         <LinkWrapper>
           {next && (

@@ -1,5 +1,4 @@
 import Typography from 'typography';
-import color from 'color';
 import { colors } from './constants';
 
 // eslint-disable-next-line
@@ -13,7 +12,7 @@ const theme = {
   bodyColor: colors.text,
   bodyFontFamily: ['IBM Plex Sans', 'sans-serif'],
   bodyWeight: 400,
-  blockMarginBottom: 0.85,
+  blockMarginBottom: 1,
   headerFontFamily: ['IBM Plex Sans', 'sans-serif'],
   headerWeight: 600,
   scaleRatio: 1.5,
@@ -26,7 +25,7 @@ theme.overrideThemeStyles = () => ({
   '@media (max-width: 767px) { html { font-size: 16px } }': {},
 
   'h1, h2, h3': {
-    lineHeight: 1.3,
+    lineHeight: 1.2,
   },
   'h1 a, h2 a, h3 a': {
     color: colors.primary,
@@ -36,14 +35,12 @@ theme.overrideThemeStyles = () => ({
     fontWeight: 500,
   },
   a: {
-    color: colors.secondary,
+    color: colors.link,
     textDecoration: 'none',
-    transition: '0.25s background-color ease-in-out',
+    transition: '0.15s background-color ease-in-out',
   },
   'article a:hover, p a:hover, ul a:hover, ol a:hover, dl a:hover': {
-    backgroundColor: color(colors.secondary)
-      .fade(0.94)
-      .string(),
+    textDecoration: 'underline',
   },
   small: {
     fontSize: '90%',

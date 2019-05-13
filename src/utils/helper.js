@@ -3,11 +3,12 @@ export function getRootPath() {
   if (typeof __PREFIX_PATHS__ !== 'undefined' && __PREFIX_PATHS__) {
     rootPath = `${__PATH_PREFIX__}/`;
   }
+
   return rootPath;
 }
 
-export function getPageTitle(data) {
-  return data.site.siteMetadata.title;
+export function onHomepage(location) {
+  return location.pathname === getRootPath();
 }
 
 export function onPostPage(location) {
@@ -15,10 +16,6 @@ export function onPostPage(location) {
   return postUrlRegex.test(location.pathname);
 }
 
-export function onBlogPage(match, location) {
-  return location.pathname === getRootPath() || onPostPage(location);
-}
-
-export function onTeamPage(location) {
-  return location.pathname.includes('team');
+export function getPageTitle(data) {
+  return data.site.siteMetadata.title;
 }
