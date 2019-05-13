@@ -18,7 +18,7 @@ const FooterLink = styled('a')`
   font-weight: 500;
 
   &:hover {
-    color: ${colors.secondary};
+    color: ${colors.primary};
   }
 
   & + & {

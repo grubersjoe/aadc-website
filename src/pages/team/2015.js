@@ -28,8 +28,8 @@ const Team2015 = props => (
       />
     </Helmet>
 
-    <TeamNav />
     <h1>Team Smart Driving 2014/2015</h1>
+    <TeamNav />
 
     <TeamInfo leader={{ name: 'Denny Hecht' }} />
 

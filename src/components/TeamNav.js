@@ -4,14 +4,14 @@ import styled from 'styled-components';
 import color from 'color';
 
 import { colors } from '../utils/constants';
-import { onTeamPage } from '../utils/helper';
 import { rhythm } from '../utils/typography';
 
-const StyledTeamNav = styled.nav`
+const Nav = styled.nav`
   position: relative;
   display: inline-flex;
   flex-wrap: nowrap;
-  margin-bottom: ${rhythm(1.5)};
+  margin-top: ${rhythm(0.25)};
+  margin-bottom: ${rhythm(1.25)};
   overflow-x: auto;
 
   /**
@@ -59,27 +59,21 @@ const StyledTeamNav = styled.nav`
   }
 `;
 
-const TeamNav = () => {
-  const isPartiallyActive = ({ location }) => {
-    return onTeamPage(location) ? { className: 'active' } : {};
-  };
-
-  return (
-    <StyledTeamNav>
-      <Link to="/team" getProps={isPartiallyActive}>
-        Team 2018
-      </Link>
-      <Link to="/team/2017" activeClassName="active">
-        Team 2017
-      </Link>
-      <Link to="/team/2016" activeClassName="active">
-        Team 2016
-      </Link>
-      <Link to="/team/2015" activeClassName="active">
-        Team 2015
-      </Link>
-    </StyledTeamNav>
-  );
-};
+const TeamNav = () => (
+  <Nav>
+    <Link to="/team" activeClassName="active">
+      Team 2018
+    </Link>
+    <Link to="/team/2017" activeClassName="active">
+      Team 2017
+    </Link>
+    <Link to="/team/2016" activeClassName="active">
+      Team 2016
+    </Link>
+    <Link to="/team/2015" activeClassName="active">
+      Team 2015
+    </Link>
+  </Nav>
+);
 
 export default TeamNav;

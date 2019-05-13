@@ -6,11 +6,12 @@ import { colors } from '../utils/constants';
 import { onPostPage } from '../utils/helper';
 import { rhythm } from '../utils/typography';
 
-const Wrapper = styled.nav`
-  margin-bottom: ${rhythm(1.75)};
+const StyledNav = styled.nav`
+  display: flex;
+  margin-bottom: ${rhythm(1.5)};
 
   a {
-    padding-bottom: 0.2rem;
+    padding-bottom: 0.16rem;
     border-bottom: 2px solid transparent;
     transition: all 0.25s ease-in-out;
     color: ${colors.text};
@@ -20,13 +21,12 @@ const Wrapper = styled.nav`
     }
 
     &.active {
-      color: ${colors.primary};
       border-bottom: 2px solid ${colors.primary};
     }
   }
 
   a + a {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
   }
 `;
 
@@ -36,7 +36,7 @@ const Nav = () => {
   };
 
   return (
-    <Wrapper>
+    <StyledNav>
       <Link to="/" getProps={isPartiallyActive}>
         Neuigkeiten
       </Link>
@@ -46,7 +46,7 @@ const Nav = () => {
       <Link to="/publikationen" activeClassName="active" partiallyActive={true}>
         Publikationen
       </Link>
-    </Wrapper>
+    </StyledNav>
   );
 };
 

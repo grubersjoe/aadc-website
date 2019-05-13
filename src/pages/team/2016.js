@@ -29,8 +29,8 @@ const Team2016 = props => (
       />
     </Helmet>
 
-    <TeamNav />
     <h1>Team Smart Driving 2015/2016</h1>
+    <TeamNav />
 
     <TeamInfo leader={{ name: 'Georg Jenschmischek' }} />
 

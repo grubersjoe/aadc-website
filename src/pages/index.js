@@ -22,6 +22,7 @@ const BlogIndex = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={`Neuigkeiten – ${getPageTitle(props.data)}`} />
+      <h1>Neues aus Leipzig</h1>
 
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;

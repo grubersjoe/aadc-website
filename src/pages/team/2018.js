@@ -30,8 +30,8 @@ const Team2018 = props => (
       />
     </Helmet>
 
-    <TeamNav />
     <h1>Team Smart Driving 2017/2018</h1>
+    <TeamNav />
 
     <TeamInfo
       leader={{
@@ -62,7 +62,6 @@ const Team2018 = props => (
         profiles={{
           website: 'https://grubersjoe.de',
           github: 'https://github.com/grubersjoe',
-          xing: 'https://www.xing.com/profile/Jonathan_Gruber',
         }}
       />
       <Avatar caption="Fabian Sauer" />

@@ -1,18 +1,14 @@
-import color from 'color';
-
-const containerWidth = 620; // px
+const containerWidth = 640; // px
 
 const colors = {
   primary: 'hsl(212, 100%, 22%)',
-  secondary: 'hsl(210, 64%, 37%)',
+  link: 'hsl(246, 50%, 36%)',
   text: 'hsl(212, 100%, 8%)',
-  textMuted: color('hsl(212, 100%, 8%)')
-    .fade(0.3)
-    .string(),
+  textMuted: 'rgba(0, 0, 0, 0.6)',
 };
 
 const fontSizes = {
-  large: '112%',
+  large: '110%',
   small: '90%',
 };
 
