@@ -28,7 +28,9 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 648, // page width
+              maxWidth: 640, // page width
+              quality: 70,
+              withWebp: true,
             },
           },
           {
@@ -61,7 +63,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
 
-    'gatsby-plugin-feed',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
