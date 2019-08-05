@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRss } from '@fortawesome/free-solid-svg-icons';
 
 import { rhythm } from '../utils/typography';
 import { colors, fontSizes } from '../utils/constants';
@@ -28,9 +26,6 @@ const FooterLink = styled('a')`
 
 const Footer = () => (
   <Wrapper>
-    <FooterLink href="/rss.xml" title="RSS Feed">
-      <FontAwesomeIcon icon={faRss} style={{ marginRight: '0.25rem', maxWidth: '0.875em' }} /> Feed
-    </FooterLink>
     <FooterLink
       href="https://www.htwk-leipzig.de/hochschule/kontakt/impressum/"
       target="_blank"
