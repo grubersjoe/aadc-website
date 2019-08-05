@@ -63,7 +63,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write '*.js' 'src/**/*'",
-    "lint": "eslint --max-warnings=0 --ext .js,.jsx --ignore-pattern public .",
+    "lint": "eslint --max-warnings=0 'src/**/*.{js,jsx}'",
     "prod": "npm run build && gatsby serve"
   },
   "husky": {
