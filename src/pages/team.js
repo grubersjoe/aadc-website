@@ -12,6 +12,9 @@ export const PageQuery = graphql`
         title
       }
     }
+    team: file(relativePath: { eq: "images/team/team-2017.jpg" }) {
+      ...fullwidthImage
+    }
   }
 `;
 

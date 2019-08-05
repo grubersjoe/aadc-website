@@ -76,7 +76,7 @@ Publications.propTypes = {
 export default Publications;
 
 export const PageQuery = graphql`
-  query PublicationsQuery {
+  query {
     site {
       siteMetadata {
         title

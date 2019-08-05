@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import Image from 'gatsby-image';
 import Helmet from 'react-helmet';
 
 import Layout from '../../components/Layout';
@@ -16,7 +17,6 @@ import {
   avatarLars,
   avatarEike,
 } from '../../images/avatars';
-import { team2014 } from '../../images/team';
 import { getPageTitle } from '../../utils/helper';
 
 const Team2015 = props => (
@@ -33,8 +33,12 @@ const Team2015 = props => (
 
     <TeamInfo leader={{ name: 'Denny Hecht' }} />
 
-    <a href={team2014} target="_blank" rel="noopener noreferrer">
-      <img src={team2014} alt="Team Smart Driving 2014/2015" />
+    <a href={props.data.team.publicURL} target="_blank" rel="noopener noreferrer">
+      <Image
+        fluid={props.data.team.childImageSharp.fluid}
+        fadeIn={false}
+        alt="Team Smart Driving 2014/2015"
+      />
     </a>
 
     <h2>Kernteam</h2>
@@ -58,6 +62,9 @@ export const PageQuery = graphql`
       siteMetadata {
         title
       }
+    }
+    team: file(relativePath: { eq: "images/team/team-2014.jpg" }) {
+      ...fullwidthImage
     }
   }
 `;
