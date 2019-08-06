@@ -8,19 +8,28 @@ import logo from '../images/logo.svg';
 
 const LogoLink = styled(Link)`
   display: block;
-  margin-right: ${rhythm(1)};
-  flex: 0 0 136px;
+  width: 40%;
+  min-width: 100px;
 
-  img {
-    margin-bottom: 0;
+  @media (min-width: 768px) {
+    width: auto;
+    margin-right: ${rhythm(1)};
+    flex: 0 0 136px;
+
+    img {
+      margin-bottom: 0;
+    }
   }
 `;
 
 const StyledBio = styled.article`
-  display: flex;
   margin-top: ${props => (props.isFooter ? rhythm(2) : 0)};
   margin-bottom: ${rhythm(2)};
   hyphens: auto;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 const Bio = props => (
