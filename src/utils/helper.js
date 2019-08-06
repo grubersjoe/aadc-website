@@ -1,5 +1,3 @@
-import { graphql } from 'gatsby';
-
 export function getRootPath() {
   let rootPath = '/';
   if (typeof __PREFIX_PATHS__ !== 'undefined' && __PREFIX_PATHS__) {
@@ -22,13 +20,8 @@ export function getPageTitle(data) {
   return data.site.siteMetadata.title;
 }
 
-export const fullwidthImage = graphql`
-  fragment fullwidthImage on File {
-    publicURL
-    childImageSharp {
-      fluid(maxWidth: 640, quality: 80) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`;
+export function getAvatarFor(data, name) {
+  const match = data.edges.find(obj => obj.node.name.toLowerCase() === name.toLowerCase());
+
+  return match ? match.node : null;
+}

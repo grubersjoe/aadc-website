@@ -1,27 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Image from 'gatsby-image';
 import Helmet from 'react-helmet';
 
+import { getAvatarFor, getPageTitle } from '../../utils/helper';
+import Avatar from '../../components/Avatar';
 import Layout from '../../components/Layout';
 import ImageGrid from '../../components/ImageGrid';
 import TeamNav from '../../components/TeamNav';
 import TeamInfo from '../../components/TeamInfo';
+import TeamPhoto from '../../components/TeamPhoto';
 
-import Avatar from '../../components/Avatar';
-import {
-  avatarDenny,
-  avatarSilvio,
-  avatarAndreas,
-  avatarLars,
-  avatarEike,
-} from '../../images/avatars';
-import { getPageTitle } from '../../utils/helper';
-
-const Team2015 = props => (
-  <Layout location={props.location}>
-    <Helmet title={`Team 2014/2015 – ${getPageTitle(props.data)}`}>
+const Team2015 = ({ data, location }) => (
+  <Layout location={location}>
+    <Helmet title={`Team 2014/2015 – ${getPageTitle(data)}`}>
       <meta
         name="description"
         content="Website des Studententeams HTWK Smart Driving aus Leipzig – Teammitglieder 2014/2015."
@@ -32,29 +23,18 @@ const Team2015 = props => (
     <TeamNav />
 
     <TeamInfo leader={{ name: 'Denny Hecht' }} />
-
-    <a href={props.data.team.publicURL} target="_blank" rel="noopener noreferrer">
-      <Image
-        fluid={props.data.team.childImageSharp.fluid}
-        fadeIn={false}
-        alt="Team Smart Driving 2014/2015"
-      />
-    </a>
+    <TeamPhoto img={data.team} alt="Team Smart Driving 2014/2015" />
 
     <h2>Kernteam</h2>
     <ImageGrid>
-      <Avatar imgUrl={avatarDenny} caption="Denny Hecht" />
-      <Avatar imgUrl={avatarSilvio} caption="Silvio Feig" />
-      <Avatar imgUrl={avatarAndreas} caption="Andreas Kluge" />
-      <Avatar imgUrl={avatarLars} caption="Lars Kollmann" />
-      <Avatar imgUrl={avatarEike} caption="Eike Florian Petersen" />
+      <Avatar img={getAvatarFor(data.avatars, 'Denny')} caption="Denny Hecht" />
+      <Avatar img={getAvatarFor(data.avatars, 'Silvio')} caption="Silvio Feig" />
+      <Avatar img={getAvatarFor(data.avatars, 'Andreas')} caption="Andreas Kluge" />
+      <Avatar img={getAvatarFor(data.avatars, 'Lars')} caption="Lars Kollmann" />
+      <Avatar img={getAvatarFor(data.avatars, 'Eike')} caption="Eike Florian Petersen" />
     </ImageGrid>
   </Layout>
 );
-
-Team2015.propTypes = {
-  data: PropTypes.objectOf(PropTypes.object).isRequired,
-};
 
 export const PageQuery = graphql`
   query {
@@ -65,6 +45,13 @@ export const PageQuery = graphql`
     }
     team: file(relativePath: { eq: "images/team/team-2014.jpg" }) {
       ...fullwidthImage
+    }
+    avatars: allFile(filter: { name: { in: ["denny", "silvio", "andreas", "lars", "eike"] } }) {
+      edges {
+        node {
+          ...avatarImage
+        }
+      }
     }
   }
 `;
