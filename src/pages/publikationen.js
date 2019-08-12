@@ -51,6 +51,12 @@ const Publications = props => {
               3D-Objekt-Verfolgung mit Stixel-Darstellung in autonomen Fahrzeugen
             </DownloadLink>
           </dd>
+          <dt>Tino Weidenmüller: Masterarbeit (2018)</dt>
+          <dd>
+            <DownloadLink href={`${rootPath}files/ma_weidenmueller.pdf`} target="_blank">
+              Echtzeitfähiges Objekt-Tracking in Frontkameraaufnahmen von Fahrzeugen
+            </DownloadLink>
+          </dd>
           <dt>Fabian Freihube: Bachelorarbeit (2016)</dt>
           <dd>
             <DownloadLink href={`${rootPath}files/ba_freihube.pdf`} target="_blank">
