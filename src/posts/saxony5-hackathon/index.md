@@ -4,7 +4,7 @@ date: '2019-08-12'
 ---
 
 
-Am Montag den 5. August machte sich ein großer Teil unseres Smart-Driving-Teams, genauer acht Studierende und [Frau Professor Sibylle Schwarz](https://www.imn.htwk-leipzig.de/~schwarz/) auf nach Dresden um dort am Hackathon unterstützt vom Saxony5 teilzunehmen. Der Hackathon drehte sich eine Woche rund um das Thema autonomes Fahren. Veranstaltet wurde das Ganze in den Räumlichkeiten der Forschungseinrichtung der HTW-Dresen [Mechlab](https://www.htw-mechlab.de).
+Am Montag den 5. August machte sich ein großer Teil unseres Smart-Driving-Teams, genauer acht Studierende und [Frau Professor Sibylle Schwarz](https://www.imn.htwk-leipzig.de/~schwarz/) auf nach Dresden um dort an einem Hackathon unterstützt vom Saxony5 teilzunehmen. Der Hackathon drehte sich eine Woche rund um das Thema autonomes Fahren. Veranstaltet wurde das Ganze in den Räumlichkeiten der Forschungseinrichtung der HTW-Dresen [Mechlab](https://www.htw-mechlab.de).
 
 ![Teilnehmer](IMG_7958.jpg)
 
