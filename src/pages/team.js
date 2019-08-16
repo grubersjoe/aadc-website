@@ -15,7 +15,9 @@ export const PageQuery = graphql`
     team: file(relativePath: { eq: "images/team/team-2017.jpg" }) {
       ...fullwidthImage
     }
-    avatars: allFile(filter: { name: { in: ["lina", "leo", "nick", "fabi", "philipp"] } }) {
+    avatars: allFile(
+      filter: { name: { in: ["franz", "jo", "lina", "leo", "nick", "fabi", "philipp"] } }
+    ) {
       edges {
         node {
           ...avatarImage
