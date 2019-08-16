@@ -2,9 +2,14 @@
 
 This is the [Gatsby JS](https://www.gatsbyjs.org/) based website of the HTWK Smart Driving team.
 
+## Prerequisites
+
+- a current version of [Node.js](https://nodejs.org/en/) (use LTS if possible)
+- [yarn](https://yarnpkg.com/lang/en/)
+
 ## Development
 
-Please [yarn](https://yarnpkg.com/lang/en/) instead of npm (it's waaay faster).
+Please use yarn instead of npm (it's waaay faster and more reliable).
 
 ```
 yarn install
@@ -51,5 +56,6 @@ yarn build
 
 ## Continous deployment
 
-Every time the master branch is updated a GitLab pipeline will be triggered, which build and deploys
-the website (see `.gitlab.ci.yml`). The document root on the server is under `/var/www/html`.
+Every time the master branch is updated a GitLab pipeline will be triggered, which builds and
+deploys the website (see `.gitlab.ci.yml`). The document root on the server is under
+`/var/www/html`.

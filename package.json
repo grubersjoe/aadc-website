@@ -13,25 +13,25 @@
     "@fortawesome/react-fontawesome": "^0.1.0",
     "color": "^3.1.2",
     "dayjs": "1.8.15",
-    "gatsby": "^2.13.52",
+    "gatsby": "^2.13.65",
     "gatsby-image": "^2.2.8",
     "gatsby-plugin-google-analytics": "^2.1.7",
-    "gatsby-plugin-offline": "^2.2.4",
+    "gatsby-plugin-offline": "^2.2.6",
     "gatsby-plugin-react-helmet": "^3.1.3",
-    "gatsby-plugin-sharp": "^2.2.10",
-    "gatsby-plugin-sitemap": "^2.2.5",
+    "gatsby-plugin-sharp": "^2.2.11",
+    "gatsby-plugin-sitemap": "^2.2.6",
     "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-plugin-typography": "^2.3.2",
-    "gatsby-remark-copy-linked-files": "^2.1.4",
-    "gatsby-remark-images": "^3.1.7",
+    "gatsby-remark-copy-linked-files": "^2.1.6",
+    "gatsby-remark-images": "^3.1.12",
     "gatsby-remark-responsive-iframe": "^2.2.4",
     "gatsby-remark-smartypants": "^2.1.2",
     "gatsby-source-filesystem": "^2.1.9",
-    "gatsby-transformer-remark": "^2.6.11",
-    "gatsby-transformer-sharp": "^2.2.5",
+    "gatsby-transformer-remark": "^2.6.14",
+    "gatsby-transformer-sharp": "^2.2.6",
     "prop-types": "^15.6.1",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.18",
     "slug": "^1.1.0",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "husky": "^3.0.2",
+    "husky": "^3.0.3",
     "prettier": "^1.18.2"
   },
   "homepage": "https://smart-driving.htwk-leipzig.de",
@@ -67,7 +67,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run format && npm run lint"
+      "pre-commit": "prettier --check '*.{js,json,md}' 'src/**/*.{js,jsx,json}' && yarn lint"
     }
   }
 }
