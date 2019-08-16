@@ -5,7 +5,7 @@ const Seo = () => (
   <Helmet>
     <meta
       name="description"
-      content="Website des Studententeams HTWK Smart Driving aus Leipzig – Forschung und Entwicklung für das autonomen Autofahren."
+      content="Website des Studententeams HTWK Smart Driving aus Leipzig – Forschung und Entwicklung für das autonome Autofahren."
     />
     <meta name="theme-color" content="#225e9b" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

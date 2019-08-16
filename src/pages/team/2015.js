@@ -15,7 +15,7 @@ const Team2015 = ({ data, location }) => (
     <Helmet title={`Team 2014/2015 – ${getPageTitle(data)}`}>
       <meta
         name="description"
-        content="Website des Studententeams HTWK Smart Driving aus Leipzig – Teammitglieder 2014/2015."
+        content="Teammitglieder 2014/2015 des Studententeams HTWK Smart Driving aus Leipzig"
       />
     </Helmet>
 
