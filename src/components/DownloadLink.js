@@ -6,16 +6,22 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 import { colors } from '../utils/constants';
 
+const Link = styled.a`
+  display: flex;
+`;
+
 const Icon = styled(FontAwesomeIcon)`
+  margin-top: 0.25rem;
   margin-right: 0.5rem;
+  font-size: 90%;
   color: ${colors.primary};
 `;
 
 const DownloadLink = props => (
-  <a {...props}>
+  <Link {...props}>
     <Icon icon={faDownload} />
     {props.children}
-  </a>
+  </Link>
 );
 
 DownloadLink.propTypes = {
