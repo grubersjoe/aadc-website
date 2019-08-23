@@ -59,7 +59,7 @@ theme.overrideThemeStyles = () => ({
     fontWeight: 400,
   },
   dd: {
-    marginBottom: '0.75rem',
+    marginBottom: '1rem',
     padding: '0.25rem 0 0 1rem',
   },
   section: {

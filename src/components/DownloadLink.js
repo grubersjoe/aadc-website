@@ -8,12 +8,13 @@ import { colors } from '../utils/constants';
 
 const Link = styled.a`
   display: flex;
+  line-height: 1.2;
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-  margin-top: 0.25rem;
+  margin-top: 3px;
   margin-right: 0.5rem;
-  font-size: 90%;
+  font-size: 85%;
   color: ${colors.primary};
 `;
 
