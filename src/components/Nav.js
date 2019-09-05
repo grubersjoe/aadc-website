@@ -8,7 +8,7 @@ import { rhythm } from '../utils/typography';
 
 const StyledNav = styled.nav`
   display: flex;
-  margin-bottom: ${rhythm(1.5)};
+  margin-bottom: ${rhythm(1.75)};
 
   a {
     padding-bottom: 0.16rem;
