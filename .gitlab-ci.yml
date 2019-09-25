@@ -1,6 +1,7 @@
 cache:
   paths:
   - node_modules/
+  - .cache/
 
 build:
   script:

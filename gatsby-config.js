@@ -1,8 +1,6 @@
 module.exports = {
   siteMetadata: {
     title: 'HTWK Smart Driving',
-    author: 'Jonathan Gruber',
-    description: 'Website des Studententeams HTWK Smart Driving',
     siteUrl: 'https://smart-driving.htwk-leipzig.de/',
   },
   pathPrefix: '/',

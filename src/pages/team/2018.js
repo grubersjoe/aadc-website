@@ -15,7 +15,7 @@ const Team2018 = ({ data, location }) => (
     <Helmet title={`Team 2017/2018 – ${getPageTitle(data)}`}>
       <meta
         name="description"
-        content="Website des Studententeams HTWK Smart Driving aus Leipzig – Teammitglieder 2017/2018."
+        content="Teammitglieder 2017/2018 des Studententeam HTWK Smart Driving aus Leipzig"
       />
     </Helmet>
 
@@ -42,9 +42,9 @@ const Team2018 = ({ data, location }) => (
 
     <h2>Freie Mitarbeiter</h2>
     <ImageGrid>
-      {/* <Avatar img={avatarFranz} caption="Franz Anders" />
-      <Avatar img={avatarFranz} caption="Jonathan Gruber" />
-      <Avatar caption="Fabian Sauer" /> */}
+      <Avatar img={getAvatarFor(data.avatars, 'Franz')} caption="Franz Anders" />
+      <Avatar img={getAvatarFor(data.avatars, 'Jo')} caption="Jonathan Gruber" />
+      <Avatar caption="Fabian Sauer" />
     </ImageGrid>
   </Layout>
 );
@@ -59,7 +59,9 @@ export const PageQuery = graphql`
     team: file(relativePath: { eq: "images/team/team-2017.jpg" }) {
       ...fullwidthImage
     }
-    avatars: allFile(filter: { name: { in: ["lina", "leo", "nick", "fabi", "philipp"] } }) {
+    avatars: allFile(
+      filter: { name: { in: ["franz", "jo", "lina", "leo", "nick", "fabi", "philipp"] } }
+    ) {
       edges {
         node {
           ...avatarImage

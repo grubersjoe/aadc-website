@@ -13,6 +13,7 @@ export function onHomepage(location) {
 
 export function onPostPage(location) {
   const postUrlRegex = /\/\d{4}\/\d{2}\/.+$/;
+
   return postUrlRegex.test(location.pathname);
 }
 
