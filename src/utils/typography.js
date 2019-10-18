@@ -49,6 +49,9 @@ theme.overrideThemeStyles = () => ({
   hr: {
     height: '2px',
   },
+  blockquote: {
+    fontStyle: 'italic',
+  },
   li: {
     marginBottom: '0.25rem',
   },

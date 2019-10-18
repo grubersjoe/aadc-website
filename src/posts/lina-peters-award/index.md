@@ -9,11 +9,11 @@ Sehr stolz möchten wir unserer ehemaligen Teamleiterin [Lina Peters](https://le
 
 Lina ist seit 2017 Mitglied des HTWK Smart Driving Teams und übernahm 2018 die Rolle der Teamleitung. Seit der Abgabe dieser Aufgabe steht sie dem Team noch immer mit Rat und Tat zur Seite und ist vor allem für neue Teammitglieder eine wunderbare Mentorin.
 
-> "Menschen wie Lina sind für die Informatik und ihre Kollegen und Kommilitonen ein Geschenk, da sie es versteht ihre eigene Leidenschaft für ein Thema auf ihr Umfeld zu  projizieren und damit jedem zeigt das die digitale Welt nicht nur aus unpersönlichen 1 und 0 besteht."
-<br>[Fabian Freihube](https://freihube.dev)
+> „Menschen wie Lina sind für die Informatik und ihre Kollegen und Kommilitonen ein Geschenk, da sie es versteht ihre eigene Leidenschaft für ein Thema auf ihr Umfeld zu  projizieren und damit jedem zeigt das die digitale Welt nicht nur aus unpersönlichen 1 und 0 besteht.“
+<br><div style="margin-top: -1em; font-style: normal">[Fabian Freihube](https://freihube.dev)</div>
 
-> "Lina ist eine engagierte Studentin und ein wichtiges Mitglied des HTWK Smart Driving Teams! Da wir zusammen am Hackathon Saxony5 teilgenommen haben, hatte ich die Möglichkeit Linas Begeisterung für Autonomes Fahren und KI zu beobachten und viel mitzunehmen. Es wäre super, mehr solche Mädels wie Lina in der Informatik zu haben."
-<br>Mariia Fortova
+> „Lina ist eine engagierte Studentin und ein wichtiges Mitglied des HTWK Smart Driving Teams! Da wir zusammen am Hackathon Saxony5 teilgenommen haben, hatte ich die Möglichkeit Linas Begeisterung für Autonomes Fahren und KI zu beobachten und viel mitzunehmen. Es wäre super, mehr solche Mädels wie Lina in der Informatik zu haben.“
+<br><div style="margin-top: -1em; font-style: normal">Mariia Fortova</div>
 
-> "Linas großes Wissen im Bereich der künstlichen Intelligenz und dem autonomen Fahren machen sie zu einem wertvollen Mitglied des Smart Driving Teams und für mich zu einer großartigen Gesprächspartnerin."
-<br>Jonas Höfer
+> „Linas großes Wissen im Bereich der künstlichen Intelligenz und dem autonomen Fahren machen sie zu einem wertvollen Mitglied des Smart Driving Teams und für mich zu einer großartigen Gesprächspartnerin.“
+<br><div style="margin-top: -1em; font-style: normal">Jonas Höfer</div>
