@@ -7,10 +7,7 @@ build:
   script:
   - yarn --ignore-engines install
   - ./node_modules/.bin/gatsby build --prefix-paths
+  - rm -rf /var/www/html/*
   - cp -r ./public/* /var/www/html
-  artifacts:
-    name: website
-    paths:
-    - public
   only:
   - master
