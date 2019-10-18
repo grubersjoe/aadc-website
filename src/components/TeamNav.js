@@ -61,17 +61,20 @@ const Nav = styled.nav`
 
 const TeamNav = () => (
   <Nav>
-    <Link to="/team" activeClassName="active">
-      Team 2018
+    <Link to="/team/" activeClassName="active">
+      Team 2019
     </Link>
-    <Link to="/team/2017" activeClassName="active">
+    <Link to="/team/2017/" activeClassName="active">
       Team 2017
     </Link>
-    <Link to="/team/2016" activeClassName="active">
+    <Link to="/team/2016/" activeClassName="active">
       Team 2016
     </Link>
-    <Link to="/team/2015" activeClassName="active">
+    <Link to="/team/2015/" activeClassName="active">
       Team 2015
+    </Link>
+    <Link to="/team/2014/" activeClassName="active">
+      Team 2014
     </Link>
   </Nav>
 );

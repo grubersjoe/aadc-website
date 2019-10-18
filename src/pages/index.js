@@ -29,7 +29,7 @@ const BlogIndex = props => {
         return (
           <article key={node.fields.slug} style={{ marginBottom: rhythm(1.5) }}>
             <h3 style={{ marginBottom: 0 }}>
-              <Link to={`/${node.fields.slug}`}>{title}</Link>
+              <Link to={`/${node.fields.slug}/`}>{title}</Link>
             </h3>
             <Date>{node.frontmatter.date}</Date>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />

@@ -64,7 +64,7 @@ const BlogPostTemplate = props => {
       <PostNav>
         <LinkWrapper>
           {next && (
-            <Link to={`/${next.fields.slug}`} rel="next">
+            <Link to={`/${next.fields.slug}/`} rel="next">
               <LinkIcon icon={faArrowLeft} style={{ marginRight: 8 }} />
               <LinkText>{next.frontmatter.title}</LinkText>
             </Link>
@@ -72,7 +72,7 @@ const BlogPostTemplate = props => {
         </LinkWrapper>
         <LinkWrapper>
           {previous && (
-            <Link to={`/${previous.fields.slug}`} rel="previous">
+            <Link to={`/${previous.fields.slug}/`} rel="previous">
               <LinkText style={{ textAlign: 'right' }}>{previous.frontmatter.title}</LinkText>
               <LinkIcon icon={faArrowRight} style={{ marginLeft: 8 }} />
             </Link>

@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import Team2018 from './team/2018';
+import CurrentTeam from './team/2019';
 
-const TeamPage = props => <Team2018 {...props} />;
+const TeamPage = props => <CurrentTeam {...props} />;
 
 export const PageQuery = graphql`
   query {
@@ -12,12 +12,10 @@ export const PageQuery = graphql`
         title
       }
     }
-    team: file(relativePath: { eq: "images/team/team-2017.jpg" }) {
+    team: file(relativePath: { eq: "team/team-2019.jpg" }) {
       ...fullwidthImage
     }
-    avatars: allFile(
-      filter: { name: { in: ["franz", "jo", "lina", "leo", "nick", "fabi", "philipp"] } }
-    ) {
+    avatars: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
       edges {
         node {
           ...avatarImage

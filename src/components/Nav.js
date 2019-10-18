@@ -40,10 +40,10 @@ const Nav = () => {
       <Link to="/" getProps={isPartiallyActive}>
         Neuigkeiten
       </Link>
-      <Link to="/team" activeClassName="active" partiallyActive={true}>
+      <Link to="/team/" activeClassName="active" partiallyActive={true}>
         Team
       </Link>
-      <Link to="/publikationen" activeClassName="active" partiallyActive={true}>
+      <Link to="/publikationen/" activeClassName="active" partiallyActive={true}>
         Publikationen
       </Link>
     </StyledNav>

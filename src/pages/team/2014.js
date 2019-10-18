@@ -11,28 +11,28 @@ import TeamInfo from '../../components/TeamInfo';
 import TeamNav from '../../components/TeamNav';
 import TeamPhoto from '../../components/TeamPhoto';
 
-const Team2015 = ({ data, location }) => (
+const Team2014 = ({ data, location }) => (
   <Layout location={location}>
-    <Helmet title={`Team 2015/2016 – ${getPageTitle(data)}`}>
+    <Helmet title={`Team 2014/2015 – ${getPageTitle(data)}`}>
       <meta
         name="description"
-        content="Teammitglieder 2015/2016 des Studententeam HTWK Smart Driving aus Leipzig"
+        content="Teammitglieder 2014/2015 des Studententeams HTWK Smart Driving aus Leipzig"
       />
     </Helmet>
 
-    <h1>Team Smart Driving 2015/2016</h1>
+    <h1>Team Smart Driving 2014/2015</h1>
     <TeamNav />
 
-    <TeamInfo leader={{ name: 'Georg Jenschmischek' }} />
-    <TeamPhoto img={data.team} alt="Team Smart Driving 2015/2016" />
+    <TeamInfo leader={{ name: 'Denny Hecht' }} />
+    <TeamPhoto img={data.team} alt="Team Smart Driving 2014/2015" />
 
     <h2>Kernteam</h2>
     <ImageGrid>
-      <Avatar img={getAvatarFor(data.avatars, 'Georg')} caption="Georg Jenschmischek" />
-      <Avatar img={getAvatarFor(data.avatars, 'Patrick')} caption="Patrick Bachmann" />
+      <Avatar img={getAvatarFor(data.avatars, 'Denny')} caption="Denny Hecht" />
       <Avatar img={getAvatarFor(data.avatars, 'Silvio')} caption="Silvio Feig" />
-      <Avatar img={getAvatarFor(data.avatars, 'Fabi')} caption="Fabian Freihube" />
-      <Avatar img={getAvatarFor(data.avatars, 'Max')} caption="Max Winkler" />
+      <Avatar img={getAvatarFor(data.avatars, 'Andreas')} caption="Andreas Kluge" />
+      <Avatar img={getAvatarFor(data.avatars, 'Lars')} caption="Lars Kollmann" />
+      <Avatar img={getAvatarFor(data.avatars, 'Eike')} caption="Eike Florian Petersen" />
     </ImageGrid>
   </Layout>
 );
@@ -44,7 +44,7 @@ export const PageQuery = graphql`
         title
       }
     }
-    team: file(relativePath: { eq: "team/team-2015.jpg" }) {
+    team: file(relativePath: { eq: "team/team-2014.jpg" }) {
       ...fullwidthImage
     }
     avatars: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
@@ -57,4 +57,4 @@ export const PageQuery = graphql`
   }
 `;
 
-export default Team2015;
+export default Team2014;

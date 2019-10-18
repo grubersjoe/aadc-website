@@ -1,49 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TeamInfo = props => {
-  const { name: leaderName, email: leaderEmail } = props.leader;
+import { profSchwarz, profBastian } from '../data/professors';
 
-  return (
-    <dl>
-      <dt style={{ fontWeight: 500 }}>Betreuende Professoren</dt>
-      <dd>
-        <a
-          href="http://www.imn.htwk-leipzig.de/~schwarz/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Prof. Dr. Schwarz
-        </a>{' '}
-        und{' '}
-        <a
-          href="https://portal.imn.htwk-leipzig.de/fakultaet/personen/m6bast"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Prof. Dr. Bastian
-        </a>
-        <br />
-        <a href="https://portal.imn.htwk-leipzig.de/" target="_blank" rel="noopener noreferrer">
-          Fakultät Informatik, Mathematik und Naturwissenschaften
-        </a>
-      </dd>
-      <dt style={{ fontWeight: 500 }}>Teamspecherin</dt>
-      <dd>
-        {leaderName}
-        {leaderEmail && (
-          <span>
-            {' '}
-            – <a href={`mailto:${leaderEmail}`}>{leaderEmail}</a>
-          </span>
-        )}
-      </dd>
-    </dl>
-  );
-};
+function concatProfessors(professors) {
+  return professors
+    .map(
+      prof =>
+        prof.url &&
+        prof.name && (
+          <a href={prof.url} target="_blank" rel="noopener noreferrer" key={prof.name}>
+            {prof.name}
+          </a>
+        ),
+    )
+    .concat(<br />)
+    .reduce((prev, curr) => [prev, curr.type !== 'br' ? ' und ' : null, curr]); // join entries
+}
+
+const TeamInfo = ({ leader, professors }) => (
+  <dl>
+    <dt style={{ fontWeight: 500 }}>Betreuende Professoren</dt>
+    <dd>
+      {concatProfessors(professors)}
+      <a href="https://portal.imn.htwk-leipzig.de/" target="_blank" rel="noopener noreferrer">
+        Fakultät Informatik, Mathematik und Naturwissenschaften
+      </a>
+    </dd>
+    <dt style={{ fontWeight: 500 }}>Teamspecherin</dt>
+    <dd>
+      {leader.name}
+      {leader.email && (
+        <span>
+          {' '}
+          – <a href={`mailto:${leader.email}`}>{leader.email}</a>
+        </span>
+      )}
+    </dd>
+  </dl>
+);
 
 TeamInfo.propTypes = {
   leader: PropTypes.objectOf(PropTypes.string).isRequired,
+  professors: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+};
+
+TeamInfo.defaultProps = {
+  professors: [profSchwarz, profBastian],
 };
 
 export default TeamInfo;
