@@ -16,12 +16,13 @@ const StyledNav = styled.nav`
     transition: all 0.25s ease-in-out;
     color: ${colors.text};
 
+    &:focus,
     &:hover {
-      color: ${colors.primary};
+      border-bottom: 2px solid #999;
     }
 
     &.active {
-      border-bottom: 2px solid ${colors.primary};
+      border-bottom: 2px solid ${colors.text};
     }
   }
 

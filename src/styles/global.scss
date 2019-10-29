@@ -1,0 +1,80 @@
+
+$colorPrimary: hsl(212, 100%, 22%);
+$colorLink: hsl(246, 50%, 36%);
+$colorText: hsl(212, 100%, 8%);
+$colorTextMuted: rgba(0, 0, 0, 0.6);
+
+
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  hyphens: none;
+
+  a {
+    color: $colorPrimary;
+  }
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+
+  @media (min-width: 768px) {
+    max-width: 600px;
+  }
+}
+
+h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: $colorLink;
+  text-decoration: none;
+  transition: 0.15s background-color ease-in-out;
+}
+
+article, p, ul, ol, dl {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+small {
+  font-size: 90%;
+}
+
+hr {
+  height: 2px;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+dl, ul, ol {
+  margin-bottom: 1.5rem;
+}
+
+dt {
+  font-weight: 400;
+}
+
+dd {
+  margin-bottom: 1rem;
+  padding: 0.25rem 0 0 1rem;
+}
+
+section {
+  margin-bottom: 1rem;
+}

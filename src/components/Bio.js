@@ -6,6 +6,22 @@ import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
 import logo from '../images/logo.svg';
 
+const StyledBio = styled.article`
+  margin-top: ${props => (props.isFooter ? rhythm(2) : 0)};
+  margin-bottom: ${rhythm(2)};
+  hyphens: auto;
+
+  em {
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    padding-right: 2em;
+  }
+`;
+
 const LogoLink = styled(Link)`
   display: block;
   width: 40%;
@@ -13,22 +29,12 @@ const LogoLink = styled(Link)`
 
   @media (min-width: 768px) {
     width: auto;
-    margin-right: ${rhythm(1)};
-    flex: 0 0 136px;
+    margin-right: ${rhythm(1.25)};
+    flex: 0 0 138px;
 
     img {
       margin-bottom: 0;
     }
-  }
-`;
-
-const StyledBio = styled.article`
-  margin-top: ${props => (props.isFooter ? rhythm(2) : 0)};
-  margin-bottom: ${rhythm(2)};
-  hyphens: auto;
-
-  @media (min-width: 768px) {
-    display: flex;
   }
 `;
 
@@ -38,7 +44,7 @@ const Bio = props => (
       <img src={logo} />
     </LogoLink>
     <div>
-      Wir sind das Team HTWK Smart Driving der{' '}
+      Wir sind das Team <em>HTWK Smart Driving</em> der{' '}
       <a href="https://www.htwk-leipzig.de" target="_blank" rel="noopener noreferrer">
         Hochschule für Technik, Wirtschaft und Kultur Leipzig
       </a>

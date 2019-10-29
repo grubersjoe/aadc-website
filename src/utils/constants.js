@@ -1,4 +1,4 @@
-const containerWidth = 640; // px
+const containerWidth = 700; // px
 
 const colors = {
   primary: 'hsl(212, 100%, 22%)',
