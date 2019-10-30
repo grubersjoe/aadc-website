@@ -40,8 +40,8 @@ const LogoLink = styled(Link)`
 
 const Bio = props => (
   <StyledBio isFooter={props.isFooter}>
-    <LogoLink to="/">
-      <img src={logo} />
+    <LogoLink to="/" title="Start">
+      <img src={logo} alt="HTWK Smart Driving Logo" />
     </LogoLink>
     <div>
       Wir sind das Team <em>HTWK Smart Driving</em> der{' '}
