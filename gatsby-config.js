@@ -48,14 +48,6 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
-    {
-      // TODO: <a href="javascript:gaOptout();">Deactive Google Analytics</a>
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-120606547-1',
-        anonymize: true,
-      },
-    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
