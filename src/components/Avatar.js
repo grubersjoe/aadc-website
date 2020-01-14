@@ -6,24 +6,24 @@ import styled from 'styled-components';
 import { fontSizes } from '../utils/constants';
 import fallbackAvatar from '../images/avatars/none.svg';
 
+const Figure = styled('figure')`
+  width: 100%;
+  margin-bottom: 0;
+`;
+
+const Caption = styled('figcaption')`
+  margin-top: 0.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  @media (min-width: 768px) {
+    font-size: ${fontSizes.small};
+  }
+`;
+
 const Avatar = props => {
   const { img, caption, style } = props;
-
-  const Figure = styled('figure')`
-    width: 100%;
-    margin-bottom: 0;
-  `;
-
-  const Caption = styled('figcaption')`
-    margin-top: 0.4rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    @media (min-width: 768px) {
-      font-size: ${fontSizes.small};
-    }
-  `;
 
   const fallbackStyles = { width: '100%', marginBottom: 0 };
 
